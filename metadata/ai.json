@@ -1,8 +1,8 @@
 {
-	"dir_name": "ai",
-	"friendly_name": "Insightful AI Interpreter",
-	"short_description": "Interprets questions and provides concise, insightful answers",
-	"description": "This pattern is designed to deeply understand the essence of a question and provide insightful answers in a concise format. It creates a mental model of the input and responds with 3-5 Markdown bullets, each containing 10 words or less.",
-	"category": "Artificial Intelligence",
-	"tags": ["AI", "question interpretation", "concise answers", "insight generation", "markdown"]
+    "dir_name": "ai",
+    "friendly_name": "",
+    "short_description": "",
+    "description": "",
+    "category": "",
+    "tags": []
 }

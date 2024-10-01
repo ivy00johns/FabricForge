@@ -1,14 +1,8 @@
 {
-	"dir_name": "analyze_comments",
-	"friendly_name": "Comment Sentiment Analyzer",
-	"short_description": "Analyzes and summarizes sentiment in internet comments",
-	"description": "This pattern specializes in reading and analyzing internet comments to characterize their sentiments, praise, and criticisms of the content they're about. It provides an unbiased assessment of comment sentiment, highlighting positive and negative aspects, and offers a summary of the overall reception.",
-	"category": "Content Analysis",
-	"tags": [
-		"sentiment analysis",
-		"comment analysis",
-		"content feedback",
-		"user reactions",
-		"social media"
-	]
+    "dir_name": "analyze_comments",
+    "friendly_name": "",
+    "short_description": "",
+    "description": "",
+    "category": "",
+    "tags": []
 }

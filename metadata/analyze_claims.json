@@ -1,15 +1,8 @@
 {
-	"dir_name": "analyze_claims",
-	"friendly_name": "Truth Claim Analyzer",
-	"short_description": "Analyzes and rates truth claims in arguments",
-	"description": "This pattern specializes in objectively analyzing and rating truth claims made in a given input. It provides evidence supporting and refuting each claim, identifies logical fallacies, and assigns quality scores. The pattern aims to offer a balanced view of arguments by summarizing claims, providing evidence, and giving overall analysis and recommendations.",
-	"category": "Critical Thinking",
-	"tags": [
-		"truth claims",
-		"argument analysis",
-		"fact-checking",
-		"logical fallacies",
-		"critical thinking",
-		"objectivity"
-	]
+    "dir_name": "analyze_claims",
+    "friendly_name": "",
+    "short_description": "",
+    "description": "",
+    "category": "",
+    "tags": []
 }

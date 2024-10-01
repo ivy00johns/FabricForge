@@ -1,14 +1,8 @@
 {
-	"dir_name": "analyze_cfp_submission",
-	"friendly_name": "Conference Submission Analyzer",
-	"short_description": "Evaluates and analyzes conference speaking session submissions",
-	"description": "This pattern specializes in reviewing and evaluating speaking session submissions for conferences. It analyzes submission abstracts, assessing their quality, relevance, educational value, and entertainment potential. The pattern provides a detailed analysis of various aspects of the submission and offers recommendations on whether to accept, reject, or request modifications.",
-	"category": "Event Management",
-	"tags": [
-		"conference",
-		"submission review",
-		"abstract analysis",
-		"speaker evaluation",
-		"event planning"
-	]
+    "dir_name": "analyze_cfp_submission",
+    "friendly_name": "",
+    "short_description": "",
+    "description": "",
+    "category": "",
+    "tags": []
 }
