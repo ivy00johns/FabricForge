@@ -10,11 +10,14 @@ GOCLEAN=$(GOCMD) clean
 # Main Go package
 MAIN_PACKAGE=.
 
-.PHONY: all build run clean
+# Prettier command
+PRETTIER=npx prettier --write .
+
+.PHONY: all build run clean format
 
 all: build
 
-build:
+build: format
 	$(GOBUILD) -o $(BINARY_NAME) $(MAIN_PACKAGE)
 
 run: build
@@ -34,9 +37,13 @@ rebuild: clean build run
 test:
 	$(GOCMD) test ./...
 
-# Format code
+# Format code (Go)
 fmt:
 	$(GOCMD) fmt ./...
+
+# Format code (Prettier)
+format:
+	$(PRETTIER)
 
 # Run linter
 lint:
@@ -56,13 +63,14 @@ build-all:
 # Help command
 help:
 	@echo "Available commands:"
-	@echo "  make build       - Build the binary"
+	@echo "  make build       - Format code and build the binary"
 	@echo "  make run         - Build and run the binary"
 	@echo "  make dev         - Run the application without building a binary"
 	@echo "  make clean       - Remove built binary"
 	@echo "  make rebuild     - Clean, build, and run"
 	@echo "  make test        - Run tests"
-	@echo "  make fmt         - Format code"
+	@echo "  make fmt         - Format Go code"
+	@echo "  make format      - Format code using Prettier"
 	@echo "  make lint        - Run linter"
 	@echo "  make deps        - Ensure dependencies are up to date"
 	@echo "  make build-all   - Build for multiple platforms"

@@ -1,0 +1,8 @@
+{
+	"dir_name": "analyze_answers",
+	"friendly_name": "Answer Analyzer",
+	"short_description": "Evaluates and scores answers to quiz questions",
+	"description": "This pattern analyzes and evaluates answers provided by students or learners to quiz questions. It generates correct answers, compares them to the student's responses, provides reasoning for the evaluation, and calculates a score. The pattern is designed to work in conjunction with the 'create_quiz' pattern, helping to assess understanding of learning objectives.",
+	"category": "Education",
+	"tags": ["quiz", "evaluation", "learning", "assessment", "education", "machine learning"]
+}

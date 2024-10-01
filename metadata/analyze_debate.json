@@ -1,0 +1,15 @@
+{
+	"dir_name": "analyze_debate",
+	"friendly_name": "Debate Analyzer",
+	"short_description": "Analyzes debate transcripts for insights and understanding",
+	"description": "This pattern is designed to objectively analyze debate transcripts, providing a comprehensive breakdown of the discussion. It evaluates the debate's insightfulness, emotionality, and participants' arguments. The pattern also identifies agreements, disagreements, possible misunderstandings, and key learnings, offering users a neutral perspective to broaden their views on the debated topics.",
+	"category": "Critical Analysis",
+	"tags": [
+		"debate analysis",
+		"argument evaluation",
+		"critical thinking",
+		"neutral perspective",
+		"idea exchange",
+		"transcript analysis"
+	]
+}

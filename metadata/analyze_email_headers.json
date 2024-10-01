@@ -1,0 +1,16 @@
+{
+	"dir_name": "analyze_email_headers",
+	"friendly_name": "Email Header Analyzer",
+	"short_description": "Analyzes email headers for security and authentication protocols",
+	"description": "This pattern specializes in analyzing email headers, focusing on SPF, DKIM, DMARC, and ARC protocols. It provides a detailed analysis of these security measures, checks domain alignment, and offers insights into potential security concerns. The pattern also includes recommendations and provides dig commands for further investigation of domain records.",
+	"category": "Cybersecurity",
+	"tags": [
+		"email security",
+		"SPF",
+		"DKIM",
+		"DMARC",
+		"ARC",
+		"domain alignment",
+		"email authentication"
+	]
+}

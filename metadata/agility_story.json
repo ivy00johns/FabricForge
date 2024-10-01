@@ -1,0 +1,14 @@
+{
+	"dir_name": "agility_story",
+	"friendly_name": "Agile User Story Generator",
+	"short_description": "Generates user stories and acceptance criteria for Agile development",
+	"description": "This pattern creates user stories and acceptance criteria for given topics in Agile development. It outputs the results in a structured JSON format, including the topic, user story, and acceptance criteria.",
+	"category": "Software Development",
+	"tags": [
+		"agile",
+		"user story",
+		"acceptance criteria",
+		"software development",
+		"project management"
+	]
+}
