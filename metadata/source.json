@@ -1,0 +1,18 @@
+{
+  "patterns": [
+		{
+			"dir_name": "analyze_claims",
+			"friendly_name": "Analyze Claims",
+			"description": "Analyzes claims in a given text",
+			"category": "Analysis",
+			"tags": ["claims", "analysis", "verification"]
+		},
+		{
+			"dir_name": "extract_entities",
+			"friendly_name": "Extract Entities",
+			"description": "Extracts named entities from text",
+			"category": "Extraction",
+			"tags": ["entities", "NER", "information extraction"]
+		}
+	]
+}
