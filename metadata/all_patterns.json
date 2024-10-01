@@ -1,5 +1,5 @@
 {
-  "patterns": [
+	"patterns": [
 		{
 			"dir_name": "analyze_claims",
 			"friendly_name": "Analyze Claims",
