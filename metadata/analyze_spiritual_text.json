@@ -1,8 +1,26 @@
 {
 	"dir_name": "analyze_spiritual_text",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Spiritual Text Analysis and Comparison",
+	"short_description": "Analyzing spiritual texts, comparing their claims and tenets to those of the King James Bible.",
+	"description": "This pattern provides a structured approach to analyze spiritual texts, identifying surprising claims and contrasting them with the King James Bible. It offers detailed comparisons with verbatim examples from both texts.",
+	"categories": [
+		"Text Analysis",
+		"Comparative Religion",
+		"Spiritual Studies",
+		"Content Comparison"
+	],
+	"tags": [
+		"spiritual text analysis",
+		"religious comparison",
+		"King James Bible",
+		"textual claims",
+		"religious tenets",
+		"comparative analysis",
+		"biblical studies",
+		"text interpretation"
+	],
+	"related_patterns": [],
+	"character_count": 1504,
+	"estimated_token_count": 376,
+	"usage_example": ""
 }

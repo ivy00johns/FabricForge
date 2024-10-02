@@ -1,8 +1,26 @@
 {
 	"dir_name": "analyze_threat_report",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Cybersecurity Threat Report Analysis",
+	"short_description": "Extracts key insights, trends, statistics, and recommendations from cybersecurity threat reports.",
+	"description": "This pattern analyzes cybersecurity threat reports, extracting surprising and insightful information. It provides a concise summary, key trends, statistics, quotes, references, and recommendations from the report.",
+	"categories": [
+		"Cybersecurity Analysis",
+		"Threat Intelligence",
+		"Report Summarization",
+		"Data Extraction"
+	],
+	"tags": [
+		"cybersecurity trends",
+		"threat analysis",
+		"security statistics",
+		"expert insights",
+		"threat intelligence",
+		"security recommendations",
+		"report extraction",
+		"security references"
+	],
+	"related_patterns": [],
+	"character_count": 2271,
+	"estimated_token_count": 567,
+	"usage_example": ""
 }

@@ -1,8 +1,24 @@
 {
 	"dir_name": "analyze_email_headers",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Email Header Security Analyzer",
+	"short_description": "Analyzes email headers for SPF, DKIM, DMARC, and ARC security protocols.",
+	"description": "This pattern specializes in providing detailed analysis of email headers, focusing on SPF, DKIM, DMARC, and ARC results. It validates each protocol's status, discusses potential security concerns, and offers actionable recommendations. The pattern also includes tools for domain alignment checks and DNS record verification.",
+	"categories": [
+		"Cybersecurity",
+		"Email Security",
+		"Network Analysis"
+	],
+	"tags": [
+		"email headers",
+		"SPF",
+		"DKIM",
+		"DMARC",
+		"ARC",
+		"domain alignment",
+		"DNS records"
+	],
+	"related_patterns": [],
+	"character_count": 2384,
+	"estimated_token_count": 411,
+	"usage_example": ""
 }

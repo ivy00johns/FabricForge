@@ -1,8 +1,21 @@
 {
 	"dir_name": "agility_story",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Agile User Story Generator",
+	"short_description": "Creates user stories and acceptance criteria for Agile development.",
+	"description": "This pattern leverages expertise in the Agile framework to generate user stories and acceptance criteria based on given topics. It's designed to assist in creating clear, concise, and effective user stories for Agile development processes, helping teams define requirements in a user-centric manner.",
+	"categories": [
+		"Agile",
+		"Project Management",
+		"Software Development"
+	],
+	"tags": [
+		"user story",
+		"acceptance criteria",
+		"agile methodology",
+		"requirements"
+	],
+	"related_patterns": [],
+	"character_count": 816,
+	"estimated_token_count": 149,
+	"usage_example": ""
 }

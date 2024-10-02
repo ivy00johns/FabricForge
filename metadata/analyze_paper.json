@@ -1,8 +1,23 @@
 {
 	"dir_name": "analyze_paper",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Research Paper Analysis Service",
+	"short_description": "Analyzes research papers for primary findings, scientific rigor, and overall quality.",
+	"description": "This pattern simulates a research paper analysis service that thoroughly examines academic papers. It extracts key information such as authors, organizations, findings, and study details. The pattern evaluates study quality across multiple dimensions, analyzes potential conflicts of interest, and provides overall ratings for novelty, rigor, and empiricism. It concludes with a final score and summary statement.",
+	"categories": [
+		"Academic Research",
+		"Scientific Analysis",
+		"Quality Assessment"
+	],
+	"tags": [
+		"research paper",
+		"scientific rigor",
+		"study quality",
+		"conflict of interest",
+		"methodology transparency",
+		"reproducibility"
+	],
+	"related_patterns": [],
+	"character_count": 3906,
+	"estimated_token_count": 678,
+	"usage_example": ""
 }

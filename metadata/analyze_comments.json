@@ -1,8 +1,22 @@
 {
 	"dir_name": "analyze_comments",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Internet Comment Sentiment Analyzer",
+	"short_description": "Analyzes and summarizes sentiments from internet comments on content.",
+	"description": "This pattern specializes in reading and characterizing sentiments, praise, and criticisms from internet comments. It provides an unbiased assessment of comment sentiments, categorizing them as positive, negative, or neutral, and summarizes the overall reception of the content.",
+	"categories": [
+		"Sentiment Analysis",
+		"Content Evaluation",
+		"User Feedback"
+	],
+	"tags": [
+		"comment analysis",
+		"sentiment assessment",
+		"user feedback",
+		"content reception",
+		"opinion summarization"
+	],
+	"related_patterns": [],
+	"character_count": 766,
+	"estimated_token_count": 135,
+	"usage_example": ""
 }

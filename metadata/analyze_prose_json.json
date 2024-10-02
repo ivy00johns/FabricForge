@@ -1,8 +1,22 @@
 {
 	"dir_name": "analyze_prose_json",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Prose Quality Analyzer",
+	"short_description": "Evaluates writing quality, focusing on novelty, clarity, and overall messaging.",
+	"description": "This pattern simulates an expert writer and editor analyzing content. It evaluates writing on three main criteria: novelty of ideas, clarity of argument, and quality of prose. The pattern provides ratings for each aspect, offers improvement recommendations, and gives an overall rating based on the lowest individual score.",
+	"categories": [
+		"Writing Analysis",
+		"Content Evaluation",
+		"Editorial Assessment"
+	],
+	"tags": [
+		"prose analysis",
+		"novelty assessment",
+		"clarity evaluation",
+		"writing improvement",
+		"content rating"
+	],
+	"related_patterns": [],
+	"character_count": 3793,
+	"estimated_token_count": 663,
+	"usage_example": ""
 }

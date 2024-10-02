@@ -1,8 +1,23 @@
 {
 	"dir_name": "analyze_presentation",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Presentation Critique Expert",
+	"short_description": "Analyzes and critiques presentations, focusing on content, speaker psychology, and delivery effectiveness.",
+	"description": "This pattern simulates an expert in reviewing presentations. It breaks down the content and the presenter's goals, analyzing the balance between novel ideas, self-focus, and entertainment. The pattern scores and provides instances for ideas presented, speaker selflessness, and entertainment value, concluding with an overall analysis and summary.",
+	"categories": [
+		"Presentation Analysis",
+		"Public Speaking",
+		"Content Evaluation"
+	],
+	"tags": [
+		"presentation critique",
+		"speaker analysis",
+		"content focus",
+		"self-reference assessment",
+		"entertainment value",
+		"idea novelty"
+	],
+	"related_patterns": [],
+	"character_count": 2275,
+	"estimated_token_count": 396,
+	"usage_example": ""
 }

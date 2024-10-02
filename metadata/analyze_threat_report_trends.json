@@ -1,8 +1,26 @@
 {
 	"dir_name": "analyze_threat_report_trends",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Cybersecurity Threat Report Trend Analysis",
+	"short_description": "Extracts key trends and insights from cybersecurity threat reports.",
+	"description": "This pattern analyzes cybersecurity threat reports, focusing on extracting surprising and insightful trends. It provides a comprehensive list of up to 50 key trends identified in the report.",
+	"categories": [
+		"Cybersecurity Analysis",
+		"Threat Intelligence",
+		"Trend Extraction",
+		"Report Analysis"
+	],
+	"tags": [
+		"cybersecurity trends",
+		"threat analysis",
+		"security insights",
+		"trend extraction",
+		"threat intelligence",
+		"report analysis",
+		"security patterns",
+		"cyber threat landscape"
+	],
+	"related_patterns": [],
+	"character_count": 1147,
+	"estimated_token_count": 286,
+	"usage_example": ""
 }

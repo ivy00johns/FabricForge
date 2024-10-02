@@ -1,8 +1,26 @@
 {
 	"dir_name": "clean_text",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Text Cleanup and Formatting",
+	"short_description": "Cleans and formats broken or malformatted text without altering content.",
+	"description": "This pattern fixes formatting issues in text, such as strange line breaks, improper capitalization, and punctuation. It improves readability while preserving the original content and spelling.",
+	"categories": [
+		"Text Processing",
+		"Document Formatting",
+		"Content Cleanup",
+		"Readability Improvement"
+	],
+	"tags": [
+		"text cleanup",
+		"formatting fix",
+		"line break removal",
+		"capitalization correction",
+		"punctuation addition",
+		"paragraph structuring",
+		"readability enhancement",
+		"content preservation"
+	],
+	"related_patterns": [],
+	"character_count": 753,
+	"estimated_token_count": 188,
+	"usage_example": ""
 }

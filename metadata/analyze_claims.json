@@ -1,8 +1,22 @@
 {
 	"dir_name": "analyze_claims",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Truth Claim Analyzer",
+	"short_description": "Objectively analyzes and rates truth claims, providing evidence, counter-arguments, and logical fallacy identification.",
+	"description": "This pattern specializes in analyzing truth claims and arguments from an objective, centrist perspective. It separates claims from arguments, provides supporting and refuting evidence, identifies logical fallacies, and assigns quality ratings to each claim. The pattern aims to offer a balanced view of input statements, helping users see the complete picture of an argument.",
+	"categories": [
+		"Critical Thinking",
+		"Argument Analysis",
+		"Fact-Checking"
+	],
+	"tags": [
+		"truth claims",
+		"evidence analysis",
+		"logical fallacies",
+		"claim rating",
+		"balanced perspective"
+	],
+	"related_patterns": [],
+	"character_count": 2343,
+	"estimated_token_count": 406,
+	"usage_example": ""
 }

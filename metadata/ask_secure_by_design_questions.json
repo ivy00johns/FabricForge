@@ -1,8 +1,26 @@
 {
 	"dir_name": "ask_secure_by_design_questions",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Secure by Design Question Generator",
+	"short_description": "Generates a comprehensive set of security-focused questions for various design projects.",
+	"description": "This pattern creates a prioritized list of security-oriented questions tailored to specific projects. It aims to ensure that security is considered from the fundamental design level, covering various aspects such as architecture and authentication.",
+	"categories": [
+		"Security Design",
+		"Project Planning",
+		"Risk Assessment",
+		"Secure Development"
+	],
+	"tags": [
+		"secure by design",
+		"security questions",
+		"project security",
+		"design considerations",
+		"risk mitigation",
+		"security architecture",
+		"authentication security",
+		"secure development lifecycle"
+	],
+	"related_patterns": [],
+	"character_count": 1999,
+	"estimated_token_count": 499,
+	"usage_example": ""
 }

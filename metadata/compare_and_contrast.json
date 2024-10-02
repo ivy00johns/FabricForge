@@ -1,8 +1,26 @@
 {
 	"dir_name": "compare_and_contrast",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Item Comparison Table Generator",
+	"short_description": "Creates a markdown table comparing and contrasting a list of items.",
+	"description": "This pattern takes a list of items and generates a concise markdown table that compares and contrasts them. It organizes items along the left side and topics along the top for easy comparison.",
+	"categories": [
+		"Data Comparison",
+		"Information Visualization",
+		"Content Analysis",
+		"Markdown Generation"
+	],
+	"tags": [
+		"comparison table",
+		"contrast analysis",
+		"markdown formatting",
+		"item comparison",
+		"data visualization",
+		"concise summary",
+		"topic organization",
+		"comparative analysis"
+	],
+	"related_patterns": [],
+	"character_count": 457,
+	"estimated_token_count": 114,
+	"usage_example": ""
 }

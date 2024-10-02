@@ -1,8 +1,22 @@
 {
 	"dir_name": "analyze_debate",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Debate Analysis and Insight Generator",
+	"short_description": "Analyzes debate transcripts to provide objective insights, arguments, and takeaways.",
+	"description": "This pattern specializes in analyzing debate transcripts from a neutral perspective. It evaluates the insightfulness, emotionality, and key points of debates, providing scores, participant analysis, arguments with references, agreements, disagreements, potential misunderstandings, learnings, and actionable takeaways.",
+	"categories": [
+		"Debate Analysis",
+		"Critical Thinking",
+		"Information Synthesis"
+	],
+	"tags": [
+		"debate transcript",
+		"argument analysis",
+		"insightfulness score",
+		"emotionality assessment",
+		"objective evaluation"
+	],
+	"related_patterns": [],
+	"character_count": 2381,
+	"estimated_token_count": 420,
+	"usage_example": ""
 }

@@ -1,8 +1,23 @@
 {
 	"dir_name": "analyze_incident",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Cybersecurity Incident Analyzer",
+	"short_description": "Extracts and organizes key information from cybersecurity breach articles.",
+	"description": "This pattern specializes in efficiently extracting essential information from cybersecurity breach articles. It organizes data into categories including attack details, target information, incident specifics, and provides analysis and recommendations based on MITRE ATT&CK framework and Atomic Red Team tests.",
+	"categories": [
+		"Cybersecurity",
+		"Incident Analysis",
+		"Threat Intelligence"
+	],
+	"tags": [
+		"cybersecurity breaches",
+		"data extraction",
+		"incident response",
+		"MITRE ATT&CK",
+		"Atomic Red Team",
+		"vulnerability analysis"
+	],
+	"related_patterns": [],
+	"character_count": 1435,
+	"estimated_token_count": 252,
+	"usage_example": ""
 }
