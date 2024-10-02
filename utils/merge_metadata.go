@@ -104,6 +104,12 @@ func main() {
 				return nil
 			}
 
+			// If friendly_name is empty, use dir_name
+			if metadata.FriendlyName == "" {
+				fmt.Printf("Setting friendly_name to dir_name for '%s'.\n", metadata.DirName)
+				metadata.FriendlyName = metadata.DirName
+			}
+
 			// Append the metadata to the combined collection
 			combinedMetadata.Patterns = append(combinedMetadata.Patterns, metadata)
 		}
