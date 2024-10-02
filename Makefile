@@ -20,7 +20,7 @@ all: build
 build: format
 	$(GOBUILD) -o $(BINARY_NAME) $(MAIN_PACKAGE)
 
-run: build
+run:
 	./$(BINARY_NAME)
 
 dev:
