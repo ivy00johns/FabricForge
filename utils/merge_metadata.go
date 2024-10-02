@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"strings"
 
 	"github.com/joho/godotenv"
 )
@@ -30,6 +31,18 @@ type CombinedMetadata struct {
 	Patterns []Metadata `json:"patterns"`
 }
 
+// Helper function to check if a slice contains any item from another slice
+func containsAny(slice, items []string) bool {
+	for _, item := range items {
+		for _, v := range slice {
+			if strings.EqualFold(v, item) {
+				return true
+			}
+		}
+	}
+	return false
+}
+
 func main() {
 	// Load environment variables from the .env file
 	err := godotenv.Load()
@@ -41,6 +54,11 @@ func main() {
 	metadataDir := os.Getenv("METADATA_DIR")
 	outputDir := os.Getenv("OUTPUT_DIR")
 	mergedMetadataFilePath := os.Getenv("MERGED_PATTERNS_METADATA_PATH")
+
+	// Load exclusion filters from .env
+	excludeDirName := os.Getenv("EXCLUDE_DIR_NAME")
+	excludeCategories := strings.Split(os.Getenv("EXCLUDE_CATEGORIES"), ",")
+	excludeTags := strings.Split(os.Getenv("EXCLUDE_TAGS"), ",")
 
 	// Prepare to collect all metadata
 	var combinedMetadata CombinedMetadata
@@ -68,6 +86,24 @@ func main() {
 				return err
 			}
 
+			// Exclude patterns based on dir_name
+			if excludeDirName != "" && strings.EqualFold(metadata.DirName, excludeDirName) {
+				fmt.Printf("Excluding pattern '%s' due to dir_name exclusion.\n", metadata.DirName)
+				return nil
+			}
+
+			// Exclude patterns based on categories
+			if len(excludeCategories) > 0 && excludeCategories[0] != "" && containsAny(metadata.Categories, excludeCategories) {
+				fmt.Printf("Excluding pattern '%s' due to categories exclusion.\n", metadata.DirName)
+				return nil
+			}
+
+			// Exclude patterns based on tags
+			if len(excludeTags) > 0 && excludeTags[0] != "" && containsAny(metadata.Tags, excludeTags) {
+				fmt.Printf("Excluding pattern '%s' due to tags exclusion.\n", metadata.DirName)
+				return nil
+			}
+
 			// Append the metadata to the combined collection
 			combinedMetadata.Patterns = append(combinedMetadata.Patterns, metadata)
 		}
@@ -81,7 +117,7 @@ func main() {
 
 	// Check if any metadata was collected
 	if len(combinedMetadata.Patterns) == 0 {
-		fmt.Println("No metadata was merged. Please check the directory or file structure.")
+		fmt.Println("No metadata was merged. Please check the exclusions or file structure.")
 		return
 	}
 
