@@ -13,7 +13,7 @@ MAIN_PACKAGE=.
 # Prettier command
 PRETTIER=npx prettier --write .
 
-.PHONY: all build run clean format
+.PHONY: all build run clean format merge
 
 all: build
 
@@ -32,6 +32,10 @@ clean:
 
 # Rebuild and run
 rebuild: clean build run
+
+# Run the script that merges JSON files in utils/merge_metadata.go
+merge:
+	$(GORUN) ./utils/merge_metadata.go
 
 # Run tests
 test:
@@ -74,3 +78,4 @@ help:
 	@echo "  make lint        - Run linter"
 	@echo "  make deps        - Ensure dependencies are up to date"
 	@echo "  make build-all   - Build for multiple platforms"
+	@echo "  make merge       - Run the JSON merge script in ./utils/merge_patterns.go"

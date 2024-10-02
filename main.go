@@ -10,6 +10,7 @@ import (
 	"sort"
 	"strings"
 	"text/template"
+	"time"
 
 	"github.com/fatih/color"
 	"github.com/joho/godotenv"
@@ -19,7 +20,7 @@ import (
 type PatternMetadata struct {
 	DirName      string   `json:"dir_name"`
 	FriendlyName string   `json:"friendly_name"`
-	Description  string   `json:"description"`
+	Description  string   `json:"short_description"`
 	Category     string   `json:"category"`
 	Tags         []string `json:"tags"`
 }
@@ -47,9 +48,9 @@ func main() {
 		return
 	}
 
-	metadataPath := os.Getenv("PATTERNS_METADATA_PATH")
+	metadataPath := os.Getenv("MERGED_PATTERNS_METADATA_PATH")
 	if metadataPath == "" {
-		fmt.Println("PATTERNS_METADATA_PATH not set in .env file")
+		fmt.Println("MERGED_PATTERNS_METADATA_PATH not set in .env file")
 		return
 	}
 
@@ -133,12 +134,6 @@ func selectPattern(patterns []PatternMetadata) (PatternMetadata, error) {
 		Active:   "\U0001F4C1 {{ .FriendlyName | cyan }} ({{ .Description | green }})",
 		Inactive: "  {{ .FriendlyName | cyan }} ({{ .Description | green }})",
 		Selected: "\U0001F4C1 {{ .FriendlyName | red | cyan }}",
-		Details: `
---------- Pattern ----------
-{{ "Name:" | faint }}	{{ .FriendlyName }}
-{{ "Description:" | faint }}	{{ .Description }}
-{{ "Category:" | faint }}	{{ .Category }}
-{{ "Tags:" | faint }}	{{ join .Tags ", " }}`,
 		FuncMap: funcMap,
 	}
 
@@ -179,7 +174,8 @@ func buildFabricCommand(pattern, inputSource, outputDir string) (string, error) 
 		streamFlag = "--stream"
 	}
 
-	outputFile := filepath.Join(outputDir, fmt.Sprintf("%s_output.txt", pattern))
+	timestamp := time.Now().Format(time.RFC3339)
+	outputFile := filepath.Join(outputDir, fmt.Sprintf("%s_%s.txt", pattern, timestamp))
 
 	var command string
 	if inputSource == "Clipboard" {
