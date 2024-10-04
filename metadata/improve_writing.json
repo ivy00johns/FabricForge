@@ -1,8 +1,24 @@
 {
 	"dir_name": "improve_writing",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Writing Enhancement Assistant",
+	"short_description": "An AI assistant that refines and improves input text for clarity, coherence, grammar, and style while maintaining original meaning.",
+	"description": "This pattern creates an AI writing expert that analyzes input text for various linguistic issues, applies corrections and improvements directly to the text, and outputs refined content in the same language as the input, without additional commentary.",
+	"categories": [
+		"Text Processing and Summarization",
+		"Content Creation and Writing",
+		"Communication and Presentation"
+	],
+	"tags": [
+		"writing improvement",
+		"grammar correction",
+		"style enhancement",
+		"text refinement",
+		"clarity optimization",
+		"coherence improvement",
+		"language processing"
+	],
+	"related_patterns": [],
+	"character_count": 573,
+	"estimated_token_count": 143,
+	"usage_example": "fabric improve_writing --input 'draft.txt' --output 'refined_text.txt'"
 }

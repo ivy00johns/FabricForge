@@ -1,8 +1,25 @@
 {
 	"dir_name": "recommend_artists",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "EDM Festival Artist Recommender",
+	"short_description": "An AI assistant that recommends EDM artists and creates personalized festival schedules based on user preferences.",
+	"description": "This pattern creates an AI expert in Electronic Dance Music (EDM) that analyzes festival lineups and user preferences to recommend artists and generate optimized schedules. It focuses on matching users with artists similar to their favorite styles and performers, prioritizing enjoyment over other factors.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Content Creation and Writing",
+		"Problem Solving and Decision Making"
+	],
+	"tags": [
+		"EDM",
+		"festival",
+		"artist recommendation",
+		"schedule optimization",
+		"techno",
+		"hardstyle",
+		"music preferences",
+		"lineup analysis"
+	],
+	"related_patterns": [],
+	"character_count": 1339,
+	"estimated_token_count": 335,
+	"usage_example": "fabric recommend_artists --input 'festival_lineup.txt' --preferences 'dark techno, Sarah Landry, Fisher'"
 }

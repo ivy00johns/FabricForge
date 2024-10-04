@@ -44,9 +44,24 @@ For each pattern, output a JSON object with the following structure:
 
 -   dir_name: The directory name for the pattern within the Fabric project structure (provided by the user).
 -   friendly_name: A user-friendly name that describes the pattern's function in the context of Fabric.
--   short_description: A brief overview of what the pattern does within the Fabric ecosystem (1-2 sentences).
+-   short_description: A brief overview of what the pattern does within the Fabric ecosystem (1 short sentence).
 -   description: A more detailed explanation of the pattern's purpose, functionality, and how it fits into the Fabric project (2-4 sentences).
 -   categories: 2-4 broad categories that the pattern falls under, relevant to Fabric's use cases.
+    -   Acceptable Categories:
+        -   Analysis and Evaluation
+        -   Text Processing and Summarization
+        -   Content Creation and Writing
+        -   Code and Development
+        -   Security and Threat Analysis
+        -   Data Extraction and Insights
+        -   Visualization and Diagramming
+        -   AI and Machine Learning
+        -   Business and Professional Development
+        -   Creative and Storytelling
+        -   Research and Academic
+        -   Communication and Presentation
+        -   Problem Solving and Decision Making
+        -   Documentation and Explanation
 -   tags: 4-8 relevant keywords or phrases related to the pattern's functionality and its application in Fabric.
 -   related_patterns: An array of related patterns within Fabric (if mentioned in README.md or manually provided).
 -   character_count: The total number of characters in the system.md file.

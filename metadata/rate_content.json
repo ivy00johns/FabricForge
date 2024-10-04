@@ -1,8 +1,24 @@
 {
 	"dir_name": "rate_content",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Content Classifier and Quality Rater",
+	"short_description": "An AI assistant that labels content with single-word tags and provides a detailed quality rating based on idea density and thematic relevance.",
+	"description": "This pattern creates an AI expert that analyzes content, assigns up to 20 single-word labels, and provides a tiered quality rating with explanations. It evaluates content based on idea count and thematic alignment with topics like human meaning, AI, and abstract thinking.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Content Creation and Writing",
+		"Data Extraction and Insights"
+	],
+	"tags": [
+		"content classification",
+		"quality rating",
+		"idea analysis",
+		"thematic evaluation",
+		"content labeling",
+		"scoring system",
+		"content curation"
+	],
+	"related_patterns": [],
+	"character_count": 2112,
+	"estimated_token_count": 528,
+	"usage_example": "fabric rate_content --input 'article.md' --output 'content_analysis.md'"
 }

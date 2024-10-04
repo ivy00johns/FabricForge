@@ -1,8 +1,24 @@
 {
 	"dir_name": "rate_value",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Content Value Per Minute (VPM) Calculator",
+	"short_description": "An AI assistant that analyzes content to determine its value density using a custom Value Per Minute (VPM) metric.",
+	"description": "This pattern creates an AI expert that parses and rates the value of content by identifying key instances of value and calculating a Value Per Minute (VPM) score. It estimates content duration, extracts valuable insights, and provides a structured evaluation of content quality.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Content Creation and Writing",
+		"Data Extraction and Insights"
+	],
+	"tags": [
+		"content analysis",
+		"value assessment",
+		"VPM metric",
+		"content duration estimation",
+		"insight extraction",
+		"content quality",
+		"data parsing"
+	],
+	"related_patterns": [],
+	"character_count": 1837,
+	"estimated_token_count": 459,
+	"usage_example": "fabric rate_value --input 'transcript.txt' --format 'podcast'"
 }

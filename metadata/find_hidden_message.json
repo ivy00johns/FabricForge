@@ -1,8 +1,24 @@
 {
 	"dir_name": "find_hidden_message",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Political Message and Propaganda Analyzer",
+	"short_description": "An AI assistant that analyzes text to identify overt and hidden political messages, providing multiple levels of interpretation.",
+	"description": "This pattern creates an AI expert in political propaganda and hidden messages that examines input text, identifies overt and covert political narratives, and provides cynical, balanced, and favorable analyses. It aims to uncover potential underlying motives in political communication.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Communication and Presentation",
+		"Research and Academic"
+	],
+	"tags": [
+		"political analysis",
+		"propaganda detection",
+		"hidden messages",
+		"narrative deconstruction",
+		"cynical interpretation",
+		"balanced analysis",
+		"audience manipulation"
+	],
+	"related_patterns": [],
+	"character_count": 3244,
+	"estimated_token_count": 811,
+	"usage_example": "fabric find_hidden_message --input 'political_speech.txt' --output 'message_analysis.md'"
 }

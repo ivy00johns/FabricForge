@@ -1,8 +1,24 @@
 {
 	"dir_name": "get_wow_per_minute",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Content Wow-Factor Analyzer",
+	"short_description": "An AI assistant that analyzes content to determine its 'wow-factor' density, measuring surprise, novelty, insight, value, and wisdom per minute.",
+	"description": "This pattern creates an AI expert that deeply analyzes content to evaluate its wow-factor density. It measures surprise, novelty, insight, value, and wisdom per minute, providing a comprehensive assessment of content quality and impact in a structured JSON format.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Content Creation and Writing",
+		"Data Extraction and Insights"
+	],
+	"tags": [
+		"content analysis",
+		"wow-factor measurement",
+		"insight evaluation",
+		"value assessment",
+		"wisdom quantification",
+		"content quality",
+		"engagement metrics"
+	],
+	"related_patterns": [],
+	"character_count": 2769,
+	"estimated_token_count": 692,
+	"usage_example": "fabric get_wow_per_minute --input 'content.txt' --output 'wow_factor_analysis.json'"
 }

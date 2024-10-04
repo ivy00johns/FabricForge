@@ -1,8 +1,24 @@
 {
 	"dir_name": "raw_query",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Universal AI Query Processor",
+	"short_description": "An AI assistant that processes and responds to any input with the best possible output based on inferred intent.",
+	"description": "This pattern creates a versatile AI that analyzes any given input, interprets the likely intent behind it, and generates the most appropriate and valuable response. It emphasizes deep understanding and flexible output generation to meet a wide range of user needs.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Problem Solving and Decision Making",
+		"AI and Machine Learning"
+	],
+	"tags": [
+		"universal AI",
+		"intent analysis",
+		"flexible response",
+		"query processing",
+		"adaptive output",
+		"context interpretation",
+		"general-purpose AI"
+	],
+	"related_patterns": [],
+	"character_count": 318,
+	"estimated_token_count": 80,
+	"usage_example": "fabric raw_query --input 'Analyze the trends in renewable energy adoption over the past decade.'"
 }

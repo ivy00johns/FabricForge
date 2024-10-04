@@ -1,8 +1,24 @@
 {
 	"dir_name": "find_logical_fallacies",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Logical Fallacy Identifier",
+	"short_description": "An AI assistant that analyzes text to identify and list logical fallacies present in arguments or statements.",
+	"description": "This pattern creates an AI expert in logical fallacies that examines input text, identifies instances of various fallacies, and outputs a structured list of found fallacies with brief explanations. It covers a wide range of formal and informal fallacies.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Problem Solving and Decision Making",
+		"Communication and Presentation"
+	],
+	"tags": [
+		"logical fallacies",
+		"argument analysis",
+		"critical thinking",
+		"rhetoric evaluation",
+		"debate analysis",
+		"reasoning assessment",
+		"cognitive biases"
+	],
+	"related_patterns": [],
+	"character_count": 16651,
+	"estimated_token_count": 4163,
+	"usage_example": "fabric find_logical_fallacies --input 'debate_transcript.txt' --output 'fallacy_analysis.md'"
 }

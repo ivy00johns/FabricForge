@@ -1,8 +1,24 @@
 {
 	"dir_name": "label_and_rate",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Content Labeler and Human-Centric Quality Rater",
+	"short_description": "An AI assistant that labels content using predefined tags and provides a detailed quality rating based on idea density and human-centric thematic relevance.",
+	"description": "This pattern creates an AI expert that analyzes content, assigns labels from a preset list, and provides a tiered quality rating with explanations. It evaluates content based on idea count and thematic alignment with human-centric topics like meaning, flourishing, and AI's impact on humanity.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Content Creation and Writing",
+		"AI and Machine Learning"
+	],
+	"tags": [
+		"content classification",
+		"quality rating",
+		"idea analysis",
+		"human-centric evaluation",
+		"content labeling",
+		"scoring system",
+		"content curation"
+	],
+	"related_patterns": [],
+	"character_count": 3395,
+	"estimated_token_count": 849,
+	"usage_example": "fabric label_and_rate --input 'article.txt' --output 'content_analysis.json'"
 }

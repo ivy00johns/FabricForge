@@ -1,15 +1,15 @@
 These files are missing the metadata.
 
-find_hidden_message/
-find_logical_fallacies/
-get_wow_per_minute/
-get_youtube_rss/
-improve_report_finding/
-improve_writing/
-label_and_rate/
-official_pattern_template/
-rate_content/
-rate_value/
-raw_query/
-raycast/
-recommend_artists/
+find_hidden_message/ - DONE
+find_logical_fallacies/ - DONE
+get_wow_per_minute/ - DONE
+get_youtube_rss/ - Problematic. EXCLUDED
+improve_report_finding/ - DONE
+improve_writing/ - DONE
+label_and_rate/ - DONE
+official_pattern_template/ - EXCLUDED - Sample file
+rate_content/ - DONE
+rate_value/ - DONE
+raw_query/ - DONE
+raycast/ - Contains .exe files.
+recommend_artists/ - DONE

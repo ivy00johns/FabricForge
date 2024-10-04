@@ -1,8 +1,24 @@
 {
 	"dir_name": "improve_report_finding",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+	"friendly_name": "Cybersecurity Report Finding Enhancer",
+	"short_description": "An AI assistant that improves and restructures cybersecurity penetration test report findings with detailed analysis and recommendations.",
+	"description": "This pattern creates an AI expert in cybersecurity that refines and enhances penetration test report findings. It restructures the content into specific sections, extracts key insights, provides recommendations, and adds relevant references, all in a markdown format.",
+	"categories": [
+		"Security and Threat Analysis",
+		"Documentation and Explanation",
+		"Analysis and Evaluation"
+	],
+	"tags": [
+		"cybersecurity",
+		"penetration testing",
+		"report improvement",
+		"risk analysis",
+		"threat modeling",
+		"security recommendations",
+		"markdown formatting"
+	],
+	"related_patterns": [],
+	"character_count": 2254,
+	"estimated_token_count": 564,
+	"usage_example": "fabric improve_report_finding --input 'original_finding.md' --output 'enhanced_finding.md'"
 }
