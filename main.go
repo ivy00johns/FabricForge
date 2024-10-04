@@ -175,7 +175,7 @@ func buildFabricCommand(pattern, inputSource, outputDir string) (string, error) 
 	}
 
 	timestamp := time.Now().Format(time.RFC3339)
-	outputFile := filepath.Join(outputDir, fmt.Sprintf("%s_%s.txt", pattern, timestamp))
+	outputFile := filepath.Join(outputDir, fmt.Sprintf("%s_%s.md", pattern, timestamp))
 
 	var command string
 	if inputSource == "Clipboard" {

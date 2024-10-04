@@ -1,26 +1,24 @@
 {
-	"dir_name": "create_aphorisms",
-	"friendly_name": "Aphorism Finder and Compiler",
-	"short_description": "Finds and compiles relevant aphorisms from real people based on given topics.",
-	"description": "This pattern takes input topics and generates a list of 20 relevant aphorisms from real people. It includes the attribution for each aphorism and ensures variety in the presentation of the sayings.",
-	"categories": [
-		"Quote Compilation",
-		"Wisdom Collection",
-		"Topic-based Insights",
-		"Aphorism Curation"
-	],
-	"tags": [
-		"aphorisms",
-		"quotes",
-		"wisdom sayings",
-		"topic-based quotes",
-		"attributed sayings",
-		"concise wisdom",
-		"famous quotes",
-		"life insights"
-	],
-	"related_patterns": [],
-	"character_count": 763,
-	"estimated_token_count": 190,
-	"usage_example": ""
+  "dir_name": "create_aphorisms",
+  "friendly_name": "Aphorism Finder and Compiler",
+  "short_description": "Finds and compiles relevant aphorisms from real people based on given topics.",
+  "description": "This pattern takes input topics and generates a list of 20 relevant aphorisms from real people. It includes the attribution for each aphorism and ensures variety in the presentation of the sayings.",
+  "categories": [
+    "Content Creation and Writing",
+    "Creative and Storytelling"
+  ],
+  "tags": [
+    "aphorisms",
+    "quotes",
+    "wisdom sayings",
+    "topic-based quotes",
+    "attributed sayings",
+    "concise wisdom",
+    "famous quotes",
+    "life insights"
+  ],
+  "related_patterns": [],
+  "character_count": 763,
+  "estimated_token_count": 190,
+  "usage_example": ""
 }

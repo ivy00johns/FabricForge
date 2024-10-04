@@ -1,8 +1,15 @@
 {
-	"dir_name": "extract_ctf_writeup",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+  "dir_name": "extract_ctf_writeup",
+  "friendly_name": "",
+  "short_description": "",
+  "description": "",
+  "categories": [
+    "Security and Threat Analysis",
+    "Data Extraction and Insights"
+  ],
+  "tags": [],
+  "related_patterns": null,
+  "character_count": 0,
+  "estimated_token_count": 0,
+  "usage_example": ""
 }

@@ -1,8 +1,15 @@
 {
-	"dir_name": "create_show_intro",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+  "dir_name": "create_show_intro",
+  "friendly_name": "",
+  "short_description": "",
+  "description": "",
+  "categories": [
+    "Content Creation and Writing",
+    "Communication and Presentation"
+  ],
+  "tags": [],
+  "related_patterns": null,
+  "character_count": 0,
+  "estimated_token_count": 0,
+  "usage_example": ""
 }

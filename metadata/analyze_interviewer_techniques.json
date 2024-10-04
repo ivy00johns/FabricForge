@@ -1,22 +1,21 @@
 {
-	"dir_name": "analyze_interviewer_techniques",
-	"friendly_name": "Interviewer Technique Analyzer",
-	"short_description": "Analyzes and extracts unique qualities and techniques of exceptional interviewers.",
-	"description": "This pattern specializes in deeply analyzing interviewer questions and techniques across multiple dimensions. It identifies patterns, contrasts with other interviewing styles, and articulates what makes the analyzed interviewer distinct and brilliant. The output includes detailed question analysis, overall technique evaluation, and a concise summary of the interviewer's special qualities.",
-	"categories": [
-		"Interview Analysis",
-		"Communication Skills",
-		"Professional Development"
-	],
-	"tags": [
-		"interviewer techniques",
-		"question analysis",
-		"communication patterns",
-		"professional skills",
-		"interviewing excellence"
-	],
-	"related_patterns": [],
-	"character_count": 2028,
-	"estimated_token_count": 357,
-	"usage_example": ""
+  "dir_name": "analyze_interviewer_techniques",
+  "friendly_name": "Interviewer Technique Analyzer",
+  "short_description": "Analyzes and extracts unique qualities and techniques of exceptional interviewers.",
+  "description": "This pattern specializes in deeply analyzing interviewer questions and techniques across multiple dimensions. It identifies patterns, contrasts with other interviewing styles, and articulates what makes the analyzed interviewer distinct and brilliant. The output includes detailed question analysis, overall technique evaluation, and a concise summary of the interviewer's special qualities.",
+  "categories": [
+    "Analysis and Evaluation",
+    "Business and Professional Development"
+  ],
+  "tags": [
+    "interviewer techniques",
+    "question analysis",
+    "communication patterns",
+    "professional skills",
+    "interviewing excellence"
+  ],
+  "related_patterns": [],
+  "character_count": 2028,
+  "estimated_token_count": 357,
+  "usage_example": ""
 }

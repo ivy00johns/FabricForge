@@ -1,8 +1,14 @@
 {
-	"dir_name": "extract_controversial_ideas",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+  "dir_name": "extract_controversial_ideas",
+  "friendly_name": "",
+  "short_description": "",
+  "description": "",
+  "categories": [
+    "Data Extraction and Insights"
+  ],
+  "tags": [],
+  "related_patterns": null,
+  "character_count": 0,
+  "estimated_token_count": 0,
+  "usage_example": ""
 }

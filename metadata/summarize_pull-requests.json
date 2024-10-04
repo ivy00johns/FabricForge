@@ -1,8 +1,15 @@
 {
-	"dir_name": "summarize_pull-requests",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+  "dir_name": "summarize_pull-requests",
+  "friendly_name": "",
+  "short_description": "",
+  "description": "",
+  "categories": [
+    "Text Processing and Summarization",
+    "Code and Development"
+  ],
+  "tags": [],
+  "related_patterns": null,
+  "character_count": 0,
+  "estimated_token_count": 0,
+  "usage_example": ""
 }

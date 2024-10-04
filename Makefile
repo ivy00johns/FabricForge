@@ -37,6 +37,10 @@ rebuild: clean build run
 merge:
 	$(GORUN) ./utils/merge_metadata.go
 
+# Update metadata .json
+update_json:
+	$(GORUN) ./utils/update_json/update_json.go
+
 # Run tests
 test:
 	$(GOCMD) test ./...

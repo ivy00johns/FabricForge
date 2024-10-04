@@ -1,26 +1,23 @@
 {
-	"dir_name": "create_5_sentence_summary",
-	"friendly_name": "Multi-Level Concept Summarizer",
-	"short_description": "Generates concise summaries of concepts or answers to questions at five levels of depth.",
-	"description": "This pattern creates summaries or answers for arbitrary input at five different levels of depth: 5 words, 4 words, 3 words, 2 words, and 1 word. It aims to capture the true essence of the input, its answer, or its meaning.",
-	"categories": [
-		"Concept Summarization",
-		"Information Distillation",
-		"Multi-Level Analysis",
-		"Concise Communication"
-	],
-	"tags": [
-		"concept summary",
-		"multi-level analysis",
-		"concise answers",
-		"information distillation",
-		"essence extraction",
-		"depth variation",
-		"concept understanding",
-		"semantic compression"
-	],
-	"related_patterns": [],
-	"character_count": 1417,
-	"estimated_token_count": 354,
-	"usage_example": ""
+  "dir_name": "create_5_sentence_summary",
+  "friendly_name": "Multi-Level Concept Summarizer",
+  "short_description": "Generates concise summaries of concepts or answers to questions at five levels of depth.",
+  "description": "This pattern creates summaries or answers for arbitrary input at five different levels of depth: 5 words, 4 words, 3 words, 2 words, and 1 word. It aims to capture the true essence of the input, its answer, or its meaning.",
+  "categories": [
+    "Text Processing and Summarization"
+  ],
+  "tags": [
+    "concept summary",
+    "multi-level analysis",
+    "concise answers",
+    "information distillation",
+    "essence extraction",
+    "depth variation",
+    "concept understanding",
+    "semantic compression"
+  ],
+  "related_patterns": [],
+  "character_count": 1417,
+  "estimated_token_count": 354,
+  "usage_example": ""
 }

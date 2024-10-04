@@ -1,26 +1,23 @@
 {
-	"dir_name": "coding_master",
-	"friendly_name": "Coding Concept Explainer and Analyzer",
-	"short_description": "Explains coding concepts to beginners and provides comprehensive analysis of coding topics.",
-	"description": "This pattern explains coding concepts in a beginner-friendly manner, using examples from reputable sources. It also provides a detailed analysis of the topic, including ideas, recommendations, habits, facts, and insights related to the coding concept.",
-	"categories": [
-		"Coding Education",
-		"Programming Concepts",
-		"Code Analysis",
-		"Learning Resources"
-	],
-	"tags": [
-		"coding explanation",
-		"beginner programming",
-		"code examples",
-		"programming concepts",
-		"coding best practices",
-		"coding habits",
-		"programming facts",
-		"coding insights"
-	],
-	"related_patterns": [],
-	"character_count": 2038,
-	"estimated_token_count": 509,
-	"usage_example": ""
+  "dir_name": "coding_master",
+  "friendly_name": "Coding Concept Explainer and Analyzer",
+  "short_description": "Explains coding concepts to beginners and provides comprehensive analysis of coding topics.",
+  "description": "This pattern explains coding concepts in a beginner-friendly manner, using examples from reputable sources. It also provides a detailed analysis of the topic, including ideas, recommendations, habits, facts, and insights related to the coding concept.",
+  "categories": [
+    "Code and Development"
+  ],
+  "tags": [
+    "coding explanation",
+    "beginner programming",
+    "code examples",
+    "programming concepts",
+    "coding best practices",
+    "coding habits",
+    "programming facts",
+    "coding insights"
+  ],
+  "related_patterns": [],
+  "character_count": 2038,
+  "estimated_token_count": 509,
+  "usage_example": ""
 }

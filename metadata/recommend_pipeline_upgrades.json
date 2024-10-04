@@ -1,8 +1,15 @@
 {
-	"dir_name": "recommend_pipeline_upgrades",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
-	"category": "",
-	"tags": []
+  "dir_name": "recommend_pipeline_upgrades",
+  "friendly_name": "",
+  "short_description": "",
+  "description": "",
+  "categories": [
+    "Business and Professional Development",
+    "Problem Solving and Decision Making"
+  ],
+  "tags": [],
+  "related_patterns": null,
+  "character_count": 0,
+  "estimated_token_count": 0,
+  "usage_example": ""
 }

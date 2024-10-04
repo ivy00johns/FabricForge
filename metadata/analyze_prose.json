@@ -1,26 +1,24 @@
 {
-	"dir_name": "analyze_prose",
-	"friendly_name": "Prose Analysis and Improvement",
-	"short_description": "Evaluating and enhancing the quality of written content, focusing on novelty, clarity, and prose style.",
-	"description": "This pattern provides a structured approach to analyze written content, assigning ratings for novelty, clarity, and prose quality. It also offers recommendations for improvement based on the evaluation, helping writers enhance their work's impact and effectiveness.",
-	"categories": [
-		"Content Analysis",
-		"Writing Enhancement",
-		"Editorial Assistance",
-		"Quality Assessment"
-	],
-	"tags": [
-		"writing evaluation",
-		"content rating",
-		"novelty assessment",
-		"clarity analysis",
-		"prose style",
-		"improvement recommendations",
-		"editorial feedback",
-		"content optimization"
-	],
-	"related_patterns": [],
-	"character_count": 2672,
-	"estimated_token_count": 668,
-	"usage_example": ""
+  "dir_name": "analyze_prose",
+  "friendly_name": "Prose Analysis and Improvement",
+  "short_description": "Evaluating and enhancing the quality of written content, focusing on novelty, clarity, and prose style.",
+  "description": "This pattern provides a structured approach to analyze written content, assigning ratings for novelty, clarity, and prose quality. It also offers recommendations for improvement based on the evaluation, helping writers enhance their work's impact and effectiveness.",
+  "categories": [
+    "Analysis and Evaluation",
+    "Text Processing and Summarization"
+  ],
+  "tags": [
+    "writing evaluation",
+    "content rating",
+    "novelty assessment",
+    "clarity analysis",
+    "prose style",
+    "improvement recommendations",
+    "editorial feedback",
+    "content optimization"
+  ],
+  "related_patterns": [],
+  "character_count": 2672,
+  "estimated_token_count": 668,
+  "usage_example": ""
 }

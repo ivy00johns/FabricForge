@@ -37,3 +37,4 @@ output/*
 fabric-promptui
 
 .DS_Store
+utils/update_json/json_updates.json

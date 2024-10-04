@@ -1,26 +1,24 @@
 {
-	"dir_name": "analyze_sales_call",
-	"friendly_name": "Sales Call Analysis and Rating",
-	"short_description": "Evaluating and scoring sales call transcripts across multiple performance dimensions.",
-	"description": "This pattern provides a structured approach to analyze sales call transcripts, assessing the salesperson's performance in terms of sales fundamentals and pitch alignment. It offers detailed ratings and actionable recommendations for improvement.",
-	"categories": [
-		"Sales Performance",
-		"Call Analysis",
-		"Performance Evaluation",
-		"Sales Training"
-	],
-	"tags": [
-		"sales call evaluation",
-		"performance rating",
-		"pitch alignment",
-		"sales fundamentals",
-		"actionable feedback",
-		"sales improvement",
-		"call transcript analysis",
-		"sales coaching"
-	],
-	"related_patterns": [],
-	"character_count": 2107,
-	"estimated_token_count": 526,
-	"usage_example": ""
+  "dir_name": "analyze_sales_call",
+  "friendly_name": "Sales Call Analysis and Rating",
+  "short_description": "Evaluating and scoring sales call transcripts across multiple performance dimensions.",
+  "description": "This pattern provides a structured approach to analyze sales call transcripts, assessing the salesperson's performance in terms of sales fundamentals and pitch alignment. It offers detailed ratings and actionable recommendations for improvement.",
+  "categories": [
+    "Analysis and Evaluation",
+    "Business and Professional Development"
+  ],
+  "tags": [
+    "sales call evaluation",
+    "performance rating",
+    "pitch alignment",
+    "sales fundamentals",
+    "actionable feedback",
+    "sales improvement",
+    "call transcript analysis",
+    "sales coaching"
+  ],
+  "related_patterns": [],
+  "character_count": 2107,
+  "estimated_token_count": 526,
+  "usage_example": ""
 }

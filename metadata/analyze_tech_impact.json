@@ -1,26 +1,24 @@
 {
-	"dir_name": "analyze_tech_impact",
-	"friendly_name": "Technology Impact Analysis",
-	"short_description": "Analyzing the societal impact and ethical considerations of technology projects.",
-	"description": "This pattern provides a structured approach to evaluate technology projects, assessing their objectives, outcomes, societal impact, ethical considerations, and sustainability. It offers a comprehensive analysis with ratings for ethical concerns and overall societal benefit.",
-	"categories": [
-		"Technology Assessment",
-		"Ethical Analysis",
-		"Societal Impact",
-		"Project Evaluation"
-	],
-	"tags": [
-		"technology impact",
-		"societal analysis",
-		"ethical considerations",
-		"project outcomes",
-		"sustainability assessment",
-		"target audience analysis",
-		"innovation evaluation",
-		"tech project breakdown"
-	],
-	"related_patterns": [],
-	"character_count": 2017,
-	"estimated_token_count": 504,
-	"usage_example": ""
+  "dir_name": "analyze_tech_impact",
+  "friendly_name": "Technology Impact Analysis",
+  "short_description": "Analyzing the societal impact and ethical considerations of technology projects.",
+  "description": "This pattern provides a structured approach to evaluate technology projects, assessing their objectives, outcomes, societal impact, ethical considerations, and sustainability. It offers a comprehensive analysis with ratings for ethical concerns and overall societal benefit.",
+  "categories": [
+    "Analysis and Evaluation",
+    "Business and Professional Development"
+  ],
+  "tags": [
+    "technology impact",
+    "societal analysis",
+    "ethical considerations",
+    "project outcomes",
+    "sustainability assessment",
+    "target audience analysis",
+    "innovation evaluation",
+    "tech project breakdown"
+  ],
+  "related_patterns": [],
+  "character_count": 2017,
+  "estimated_token_count": 504,
+  "usage_example": ""
 }

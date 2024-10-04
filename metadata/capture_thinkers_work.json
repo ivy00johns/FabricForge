@@ -1,26 +1,24 @@
 {
-	"dir_name": "capture_thinkers_work",
-	"friendly_name": "Thinker's Work and Philosophy Summarizer",
-	"short_description": "Summarizes the work, ideas, and teachings of notable thinkers or philosophical schools.",
-	"description": "This pattern creates a comprehensive summary of a philosopher's or philosophical school's work, including background, key ideas, teachings, notable works, quotes, and practical applications. It provides a structured overview for easy understanding and reference.",
-	"categories": [
-		"Philosophy Analysis",
-		"Intellectual History",
-		"Biographical Summary",
-		"Ideological Overview"
-	],
-	"tags": [
-		"philosopher summary",
-		"philosophical schools",
-		"intellectual teachings",
-		"key ideas",
-		"notable works",
-		"philosophical quotes",
-		"practical applications",
-		"life advice"
-	],
-	"related_patterns": [],
-	"character_count": 2824,
-	"estimated_token_count": 706,
-	"usage_example": ""
+  "dir_name": "capture_thinkers_work",
+  "friendly_name": "Thinker's Work and Philosophy Summarizer",
+  "short_description": "Summarizes the work, ideas, and teachings of notable thinkers or philosophical schools.",
+  "description": "This pattern creates a comprehensive summary of a philosopher's or philosophical school's work, including background, key ideas, teachings, notable works, quotes, and practical applications. It provides a structured overview for easy understanding and reference.",
+  "categories": [
+    "Research and Academic",
+    "Data Extraction and Insights"
+  ],
+  "tags": [
+    "philosopher summary",
+    "philosophical schools",
+    "intellectual teachings",
+    "key ideas",
+    "notable works",
+    "philosophical quotes",
+    "practical applications",
+    "life advice"
+  ],
+  "related_patterns": [],
+  "character_count": 2824,
+  "estimated_token_count": 706,
+  "usage_example": ""
 }

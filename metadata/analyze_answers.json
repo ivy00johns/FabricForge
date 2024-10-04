@@ -1,21 +1,21 @@
 {
-	"dir_name": "analyze_answers",
-	"friendly_name": "Answer Analysis for Quizzes",
-	"short_description": "Evaluates student answers for generated quizzes, providing scores and feedback.",
-	"description": "This pattern complements the 'create_quiz' pattern by evaluating the correctness of answers provided by learners/students. It assesses understanding of learning objectives, provides scores, and offers explanations for each answer. The pattern adapts to specified student levels and generates correct answers for comparison.",
-	"categories": [
-		"Education",
-		"Assessment",
-		"Artificial Intelligence"
-	],
-	"tags": [
-		"quiz evaluation",
-		"learning assessment",
-		"adaptive feedback",
-		"answer analysis"
-	],
-	"related_patterns": ["create_quiz"],
-	"character_count": 3693,
-	"estimated_token_count": 628,
-	"usage_example": "xclip -selection clipboard -o | fabric -sp analyze_answers"
+  "dir_name": "analyze_answers",
+  "friendly_name": "Answer Analysis for Quizzes",
+  "short_description": "Evaluates student answers for generated quizzes, providing scores and feedback.",
+  "description": "This pattern complements the 'create_quiz' pattern by evaluating the correctness of answers provided by learners/students. It assesses understanding of learning objectives, provides scores, and offers explanations for each answer. The pattern adapts to specified student levels and generates correct answers for comparison.",
+  "categories": [
+    "Analysis and Evaluation"
+  ],
+  "tags": [
+    "quiz evaluation",
+    "learning assessment",
+    "adaptive feedback",
+    "answer analysis"
+  ],
+  "related_patterns": [
+    "create_quiz"
+  ],
+  "character_count": 3693,
+  "estimated_token_count": 628,
+  "usage_example": "xclip -selection clipboard -o | fabric -sp analyze_answers"
 }

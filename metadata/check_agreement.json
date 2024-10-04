@@ -1,26 +1,24 @@
 {
-	"dir_name": "check_agreement",
-	"friendly_name": "Contract and Agreement Analyzer",
-	"short_description": "Analyzes contracts and agreements for potential issues and gotchas.",
-	"description": "This pattern provides a comprehensive analysis of contracts and agreements. It summarizes the document, highlights key aspects and stipulations, identifies critical and important issues, and suggests responses for problematic clauses.",
-	"categories": [
-		"Legal Analysis",
-		"Contract Review",
-		"Risk Assessment",
-		"Document Summary"
-	],
-	"tags": [
-		"contract analysis",
-		"agreement review",
-		"legal gotchas",
-		"document summary",
-		"critical issues",
-		"clause recommendations",
-		"legal risks",
-		"contract response"
-	],
-	"related_patterns": [],
-	"character_count": 1715,
-	"estimated_token_count": 428,
-	"usage_example": ""
+  "dir_name": "check_agreement",
+  "friendly_name": "Contract and Agreement Analyzer",
+  "short_description": "Analyzes contracts and agreements for potential issues and gotchas.",
+  "description": "This pattern provides a comprehensive analysis of contracts and agreements. It summarizes the document, highlights key aspects and stipulations, identifies critical and important issues, and suggests responses for problematic clauses.",
+  "categories": [
+    "Analysis and Evaluation",
+    "Business and Professional Development"
+  ],
+  "tags": [
+    "contract analysis",
+    "agreement review",
+    "legal gotchas",
+    "document summary",
+    "critical issues",
+    "clause recommendations",
+    "legal risks",
+    "contract response"
+  ],
+  "related_patterns": [],
+  "character_count": 1715,
+  "estimated_token_count": 428,
+  "usage_example": ""
 }
