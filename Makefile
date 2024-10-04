@@ -35,7 +35,7 @@ rebuild: clean build run
 
 # Run the script that merges JSON files in utils/merge_metadata.go
 merge:
-	$(GORUN) ./utils/merge_metadata.go
+	$(GORUN) ./utils/merge_metadata/merge_metadata.go
 
 # Update metadata .json
 update_json:
