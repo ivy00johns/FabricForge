@@ -1,21 +1,21 @@
 {
-  "dir_name": "analyze_logs",
-  "friendly_name": "Server Log Analyzer",
-  "short_description": "Analyzes server log files to identify patterns, anomalies, and potential issues affecting reliability and performance.",
-  "description": "This pattern simulates a highly experienced system administrator and service reliability engineer analyzing log files from servers. It identifies unusual patterns, assesses server reliability and performance, recognizes recurring issues, and provides data-driven recommendations for improvements based on log data analysis.",
-  "categories": [
-    "Analysis and Evaluation",
-    "Security and Threat Analysis"
-  ],
-  "tags": [
-    "log analysis",
-    "server reliability",
-    "anomaly detection",
-    "performance assessment",
-    "data-driven recommendations"
-  ],
-  "related_patterns": [],
-  "character_count": 1768,
-  "estimated_token_count": 305,
-  "usage_example": ""
+	"dir_name": "analyze_logs",
+	"friendly_name": "Server Log Analyzer",
+	"short_description": "Analyzes server log files to identify patterns, anomalies, and potential issues affecting reliability and performance.",
+	"description": "This pattern simulates a highly experienced system administrator and service reliability engineer analyzing log files from servers. It identifies unusual patterns, assesses server reliability and performance, recognizes recurring issues, and provides data-driven recommendations for improvements based on log data analysis.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Security and Threat Analysis"
+	],
+	"tags": [
+		"log analysis",
+		"server reliability",
+		"anomaly detection",
+		"performance assessment",
+		"data-driven recommendations"
+	],
+	"related_patterns": [],
+	"character_count": 1768,
+	"estimated_token_count": 305,
+	"usage_example": ""
 }

@@ -1,15 +1,15 @@
 {
-  "dir_name": "write_nuclei_template_rule",
-  "friendly_name": "",
-  "short_description": "",
-  "description": "",
-  "categories": [
-    "Code and Development",
-    "Security and Threat Analysis"
-  ],
-  "tags": [],
-  "related_patterns": null,
-  "character_count": 0,
-  "estimated_token_count": 0,
-  "usage_example": ""
+	"dir_name": "write_nuclei_template_rule",
+	"friendly_name": "",
+	"short_description": "",
+	"description": "",
+	"categories": [
+		"Code and Development",
+		"Security and Threat Analysis"
+	],
+	"tags": [],
+	"related_patterns": null,
+	"character_count": 0,
+	"estimated_token_count": 0,
+	"usage_example": ""
 }

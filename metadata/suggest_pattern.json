@@ -1,15 +1,15 @@
 {
-  "dir_name": "suggest_pattern",
-  "friendly_name": "",
-  "short_description": "",
-  "description": "",
-  "categories": [
-    "AI and Machine Learning",
-    "Problem Solving and Decision Making"
-  ],
-  "tags": [],
-  "related_patterns": null,
-  "character_count": 0,
-  "estimated_token_count": 0,
-  "usage_example": ""
+	"dir_name": "suggest_pattern",
+	"friendly_name": "",
+	"short_description": "",
+	"description": "",
+	"categories": [
+		"AI and Machine Learning",
+		"Problem Solving and Decision Making"
+	],
+	"tags": [],
+	"related_patterns": null,
+	"character_count": 0,
+	"estimated_token_count": 0,
+	"usage_example": ""
 }

@@ -1,15 +1,15 @@
 {
-  "dir_name": "create_ttrc_narrative",
-  "friendly_name": "",
-  "short_description": "",
-  "description": "",
-  "categories": [
-    "Creative and Storytelling",
-    "Content Creation and Writing"
-  ],
-  "tags": [],
-  "related_patterns": null,
-  "character_count": 0,
-  "estimated_token_count": 0,
-  "usage_example": ""
+	"dir_name": "create_ttrc_narrative",
+	"friendly_name": "",
+	"short_description": "",
+	"description": "",
+	"categories": [
+		"Creative and Storytelling",
+		"Content Creation and Writing"
+	],
+	"tags": [],
+	"related_patterns": null,
+	"character_count": 0,
+	"estimated_token_count": 0,
+	"usage_example": ""
 }

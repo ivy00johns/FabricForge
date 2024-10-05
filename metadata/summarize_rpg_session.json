@@ -1,15 +1,15 @@
 {
-  "dir_name": "summarize_rpg_session",
-  "friendly_name": "",
-  "short_description": "",
-  "description": "",
-  "categories": [
-    "Text Processing and Summarization",
-    "Creative and Storytelling"
-  ],
-  "tags": [],
-  "related_patterns": null,
-  "character_count": 0,
-  "estimated_token_count": 0,
-  "usage_example": ""
+	"dir_name": "summarize_rpg_session",
+	"friendly_name": "",
+	"short_description": "",
+	"description": "",
+	"categories": [
+		"Text Processing and Summarization",
+		"Creative and Storytelling"
+	],
+	"tags": [],
+	"related_patterns": null,
+	"character_count": 0,
+	"estimated_token_count": 0,
+	"usage_example": ""
 }

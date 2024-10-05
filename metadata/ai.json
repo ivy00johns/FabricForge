@@ -1,20 +1,20 @@
 {
-  "dir_name": "ai",
-  "friendly_name": "AI Insight Generator",
-  "short_description": "Generates concise, insightful answers to questions using AI expertise.",
-  "description": "This pattern leverages AI expertise to interpret questions deeply, create comprehensive mental models, and provide concise, insightful answers in 3-5 Markdown bullets of 10 words each. It focuses on capturing the heart and spirit of questions to deliver meaningful insights.",
-  "categories": [
-    "AI and Machine Learning"
-  ],
-  "tags": [
-    "AI",
-    "insight",
-    "concise answers",
-    "mental modeling",
-    "question interpretation"
-  ],
-  "related_patterns": [],
-  "character_count": 624,
-  "estimated_token_count": 110,
-  "usage_example": ""
+	"dir_name": "ai",
+	"friendly_name": "AI Insight Generator",
+	"short_description": "Generates concise, insightful answers to questions using AI expertise.",
+	"description": "This pattern leverages AI expertise to interpret questions deeply, create comprehensive mental models, and provide concise, insightful answers in 3-5 Markdown bullets of 10 words each. It focuses on capturing the heart and spirit of questions to deliver meaningful insights.",
+	"categories": [
+		"AI and Machine Learning"
+	],
+	"tags": [
+		"AI",
+		"insight",
+		"concise answers",
+		"mental modeling",
+		"question interpretation"
+	],
+	"related_patterns": [],
+	"character_count": 624,
+	"estimated_token_count": 110,
+	"usage_example": ""
 }

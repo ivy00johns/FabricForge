@@ -1,21 +1,21 @@
 {
-  "dir_name": "analyze_product_feedback",
-  "friendly_name": "Product Feedback Analyzer",
-  "short_description": "Analyzes, consolidates, and prioritizes user feedback for product improvements.",
-  "description": "This pattern simulates an AI assistant specialized in processing user feedback for products. It collects and analyzes feedback, identifies key themes, groups similar feedback, creates consolidated summaries, and prioritizes feedback based on usefulness. The output is presented in a clear, tabular format to aid product owners and managers in decision-making.",
-  "categories": [
-    "Analysis and Evaluation",
-    "Business and Professional Development"
-  ],
-  "tags": [
-    "user feedback",
-    "product improvement",
-    "feedback prioritization",
-    "theme identification",
-    "data consolidation"
-  ],
-  "related_patterns": [],
-  "character_count": 1718,
-  "estimated_token_count": 297,
-  "usage_example": ""
+	"dir_name": "analyze_product_feedback",
+	"friendly_name": "Product Feedback Analyzer",
+	"short_description": "Analyzes, consolidates, and prioritizes user feedback for product improvements.",
+	"description": "This pattern simulates an AI assistant specialized in processing user feedback for products. It collects and analyzes feedback, identifies key themes, groups similar feedback, creates consolidated summaries, and prioritizes feedback based on usefulness. The output is presented in a clear, tabular format to aid product owners and managers in decision-making.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Business and Professional Development"
+	],
+	"tags": [
+		"user feedback",
+		"product improvement",
+		"feedback prioritization",
+		"theme identification",
+		"data consolidation"
+	],
+	"related_patterns": [],
+	"character_count": 1718,
+	"estimated_token_count": 297,
+	"usage_example": ""
 }

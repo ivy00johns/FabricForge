@@ -1,21 +1,21 @@
 {
-  "dir_name": "analyze_cfp_submission",
-  "friendly_name": "Conference Submission Analyzer",
-  "short_description": "Evaluates speaking session submissions for conferences, providing detailed analysis and recommendations.",
-  "description": "This pattern specializes in reviewing conference Call for Papers (CFP) submissions. It analyzes abstracts for clarity, relevance, depth, speaker qualifications, educational value, and entertainment potential. The pattern provides a structured evaluation, highlighting strengths and weaknesses, and offers recommendations for acceptance, rejection, or modification of submissions.",
-  "categories": [
-    "Analysis and Evaluation",
-    "Research and Academic"
-  ],
-  "tags": [
-    "CFP",
-    "abstract review",
-    "speaker evaluation",
-    "conference planning",
-    "talk assessment"
-  ],
-  "related_patterns": [],
-  "character_count": 1891,
-  "estimated_token_count": 346,
-  "usage_example": ""
+	"dir_name": "analyze_cfp_submission",
+	"friendly_name": "Conference Submission Analyzer",
+	"short_description": "Evaluates speaking session submissions for conferences, providing detailed analysis and recommendations.",
+	"description": "This pattern specializes in reviewing conference Call for Papers (CFP) submissions. It analyzes abstracts for clarity, relevance, depth, speaker qualifications, educational value, and entertainment potential. The pattern provides a structured evaluation, highlighting strengths and weaknesses, and offers recommendations for acceptance, rejection, or modification of submissions.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Research and Academic"
+	],
+	"tags": [
+		"CFP",
+		"abstract review",
+		"speaker evaluation",
+		"conference planning",
+		"talk assessment"
+	],
+	"related_patterns": [],
+	"character_count": 1891,
+	"estimated_token_count": 346,
+	"usage_example": ""
 }

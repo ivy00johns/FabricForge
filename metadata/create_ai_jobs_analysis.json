@@ -1,24 +1,24 @@
 {
-  "dir_name": "create_ai_jobs_analysis",
-  "friendly_name": "AI Impact on Jobs Analyzer",
-  "short_description": "Analyzes the impact of AI on various job categories and provides recommendations for career resilience.",
-  "description": "This pattern examines job reports and analyzes the potential impact of AI automation on different job categories. It provides insights on job vulnerabilities, timelines for automation risks, and recommendations for personal attributes and skills to enhance career resilience.",
-  "categories": [
-    "Analysis and Evaluation",
-    "Business and Professional Development"
-  ],
-  "tags": [
-    "AI job impact",
-    "automation resilience",
-    "career planning",
-    "job market analysis",
-    "future of work",
-    "skill development",
-    "employment trends",
-    "workforce adaptation"
-  ],
-  "related_patterns": [],
-  "character_count": 2101,
-  "estimated_token_count": 525,
-  "usage_example": ""
+	"dir_name": "create_ai_jobs_analysis",
+	"friendly_name": "AI Impact on Jobs Analyzer",
+	"short_description": "Analyzes the impact of AI on various job categories and provides recommendations for career resilience.",
+	"description": "This pattern examines job reports and analyzes the potential impact of AI automation on different job categories. It provides insights on job vulnerabilities, timelines for automation risks, and recommendations for personal attributes and skills to enhance career resilience.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Business and Professional Development"
+	],
+	"tags": [
+		"AI job impact",
+		"automation resilience",
+		"career planning",
+		"job market analysis",
+		"future of work",
+		"skill development",
+		"employment trends",
+		"workforce adaptation"
+	],
+	"related_patterns": [],
+	"character_count": 2101,
+	"estimated_token_count": 525,
+	"usage_example": ""
 }

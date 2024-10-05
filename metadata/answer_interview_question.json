@@ -1,23 +1,23 @@
 {
-  "dir_name": "answer_interview_question",
-  "friendly_name": "Technical Interview Response Generator",
-  "short_description": "Generates tailored responses to technical interview questions, simulating real-world expertise.",
-  "description": "This pattern creates concise, practical responses to technical interview questions. It simulates a candidate's depth of knowledge and experience, providing structured answers that include alternative approaches and evidence-based reasoning.",
-  "categories": [
-    "Business and Professional Development"
-  ],
-  "tags": [
-    "technical interviews",
-    "response generation",
-    "expertise simulation",
-    "practical answers",
-    "alternative approaches",
-    "evidence-based reasoning",
-    "professional experience",
-    "concise communication"
-  ],
-  "related_patterns": [],
-  "character_count": 1667,
-  "estimated_token_count": 416,
-  "usage_example": ""
+	"dir_name": "answer_interview_question",
+	"friendly_name": "Technical Interview Response Generator",
+	"short_description": "Generates tailored responses to technical interview questions, simulating real-world expertise.",
+	"description": "This pattern creates concise, practical responses to technical interview questions. It simulates a candidate's depth of knowledge and experience, providing structured answers that include alternative approaches and evidence-based reasoning.",
+	"categories": [
+		"Business and Professional Development"
+	],
+	"tags": [
+		"technical interviews",
+		"response generation",
+		"expertise simulation",
+		"practical answers",
+		"alternative approaches",
+		"evidence-based reasoning",
+		"professional experience",
+		"concise communication"
+	],
+	"related_patterns": [],
+	"character_count": 1667,
+	"estimated_token_count": 416,
+	"usage_example": ""
 }

@@ -1,20 +1,20 @@
 {
-  "dir_name": "analyze_personality",
-  "friendly_name": "Psychological Profile Analyzer",
-  "short_description": "Performs in-depth psychological analysis on individuals based on their language and behavior.",
-  "description": "This pattern simulates a super-intelligent AI with comprehensive knowledge of human psychology. It analyzes the main person in a given input, considering their language, responses, and behavior. The pattern provides a concise psychological profile overview and detailed supporting points, focusing on keen insights rather than surface-level observations.",
-  "categories": [
-    "Analysis and Evaluation"
-  ],
-  "tags": [
-    "psychological profile",
-    "behavior analysis",
-    "personality insights",
-    "human psychology",
-    "character assessment"
-  ],
-  "related_patterns": [],
-  "character_count": 1324,
-  "estimated_token_count": 233,
-  "usage_example": ""
+	"dir_name": "analyze_personality",
+	"friendly_name": "Psychological Profile Analyzer",
+	"short_description": "Performs in-depth psychological analysis on individuals based on their language and behavior.",
+	"description": "This pattern simulates a super-intelligent AI with comprehensive knowledge of human psychology. It analyzes the main person in a given input, considering their language, responses, and behavior. The pattern provides a concise psychological profile overview and detailed supporting points, focusing on keen insights rather than surface-level observations.",
+	"categories": [
+		"Analysis and Evaluation"
+	],
+	"tags": [
+		"psychological profile",
+		"behavior analysis",
+		"personality insights",
+		"human psychology",
+		"character assessment"
+	],
+	"related_patterns": [],
+	"character_count": 1324,
+	"estimated_token_count": 233,
+	"usage_example": ""
 }

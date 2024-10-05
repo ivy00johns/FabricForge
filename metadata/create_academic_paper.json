@@ -1,24 +1,24 @@
 {
-  "dir_name": "create_academic_paper",
-  "friendly_name": "LaTeX Academic Paper Generator",
-  "short_description": "Generates high-quality, authoritative LaTeX academic papers based on provided input.",
-  "description": "This pattern creates professional-looking LaTeX academic papers from given input. It formats the content in a two-column layout with headers and footers, ensuring a logical and authoritative presentation of the information.",
-  "categories": [
-    "Content Creation and Writing",
-    "Research and Academic"
-  ],
-  "tags": [
-    "LaTeX academic paper",
-    "two-column layout",
-    "authoritative formatting",
-    "academic writing",
-    "content summarization",
-    "document structure",
-    "professional presentation",
-    "academic formatting"
-  ],
-  "related_patterns": [],
-  "character_count": 1147,
-  "estimated_token_count": 286,
-  "usage_example": ""
+	"dir_name": "create_academic_paper",
+	"friendly_name": "LaTeX Academic Paper Generator",
+	"short_description": "Generates high-quality, authoritative LaTeX academic papers based on provided input.",
+	"description": "This pattern creates professional-looking LaTeX academic papers from given input. It formats the content in a two-column layout with headers and footers, ensuring a logical and authoritative presentation of the information.",
+	"categories": [
+		"Content Creation and Writing",
+		"Research and Academic"
+	],
+	"tags": [
+		"LaTeX academic paper",
+		"two-column layout",
+		"authoritative formatting",
+		"academic writing",
+		"content summarization",
+		"document structure",
+		"professional presentation",
+		"academic formatting"
+	],
+	"related_patterns": [],
+	"character_count": 1147,
+	"estimated_token_count": 286,
+	"usage_example": ""
 }

@@ -1,22 +1,22 @@
 {
-  "dir_name": "analyze_patent",
-  "friendly_name": "Patent Analysis Expert",
-  "short_description": "Thoroughly examines patent applications, assessing novelty, inventive step, and technical details.",
-  "description": "This pattern simulates an experienced patent examiner capable of analyzing patents across all technology areas. It identifies the field, problem addressed, solution, and advantages of the patent. The pattern assesses novelty and inventive step based on common knowledge, provides a detailed summary, and extracts key technical keywords.",
-  "categories": [
-    "Analysis and Evaluation",
-    "Research and Academic"
-  ],
-  "tags": [
-    "patent examination",
-    "novelty assessment",
-    "inventive step",
-    "technical analysis",
-    "prior art",
-    "patent summary"
-  ],
-  "related_patterns": [],
-  "character_count": 2851,
-  "estimated_token_count": 490,
-  "usage_example": ""
+	"dir_name": "analyze_patent",
+	"friendly_name": "Patent Analysis Expert",
+	"short_description": "Thoroughly examines patent applications, assessing novelty, inventive step, and technical details.",
+	"description": "This pattern simulates an experienced patent examiner capable of analyzing patents across all technology areas. It identifies the field, problem addressed, solution, and advantages of the patent. The pattern assesses novelty and inventive step based on common knowledge, provides a detailed summary, and extracts key technical keywords.",
+	"categories": [
+		"Analysis and Evaluation",
+		"Research and Academic"
+	],
+	"tags": [
+		"patent examination",
+		"novelty assessment",
+		"inventive step",
+		"technical analysis",
+		"prior art",
+		"patent summary"
+	],
+	"related_patterns": [],
+	"character_count": 2851,
+	"estimated_token_count": 490,
+	"usage_example": ""
 }

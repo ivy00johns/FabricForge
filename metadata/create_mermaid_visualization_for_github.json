@@ -1,14 +1,14 @@
 {
-  "dir_name": "create_mermaid_visualization_for_github",
-  "friendly_name": "",
-  "short_description": "",
-  "description": "",
-  "categories": [
-    "Visualization and Diagramming"
-  ],
-  "tags": [],
-  "related_patterns": null,
-  "character_count": 0,
-  "estimated_token_count": 0,
-  "usage_example": ""
+	"dir_name": "create_mermaid_visualization_for_github",
+	"friendly_name": "",
+	"short_description": "",
+	"description": "",
+	"categories": [
+		"Visualization and Diagramming"
+	],
+	"tags": [],
+	"related_patterns": null,
+	"character_count": 0,
+	"estimated_token_count": 0,
+	"usage_example": ""
 }

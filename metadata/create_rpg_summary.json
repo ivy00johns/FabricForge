@@ -1,15 +1,15 @@
 {
-  "dir_name": "create_rpg_summary",
-  "friendly_name": "",
-  "short_description": "",
-  "description": "",
-  "categories": [
-    "Creative and Storytelling",
-    "Text Processing and Summarization"
-  ],
-  "tags": [],
-  "related_patterns": null,
-  "character_count": 0,
-  "estimated_token_count": 0,
-  "usage_example": ""
+	"dir_name": "create_rpg_summary",
+	"friendly_name": "",
+	"short_description": "",
+	"description": "",
+	"categories": [
+		"Creative and Storytelling",
+		"Text Processing and Summarization"
+	],
+	"tags": [],
+	"related_patterns": null,
+	"character_count": 0,
+	"estimated_token_count": 0,
+	"usage_example": ""
 }
