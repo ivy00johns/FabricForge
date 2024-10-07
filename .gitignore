@@ -35,6 +35,7 @@ output/*
 
 # Builds
 fabric-promptui
+fabric-cli
 
 .DS_Store
 utils/update_json/json_updates.json

@@ -5,236 +5,103 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"os/exec"
-	"path/filepath"
-	"sort"
-	"strings"
-	"text/template"
-	"time"
 
-	"github.com/fatih/color"
+	"github.com/charmbracelet/bubbles/list"
+	tea "github.com/charmbracelet/bubbletea"
+	"github.com/charmbracelet/lipgloss"
 	"github.com/joho/godotenv"
-	"github.com/manifoldco/promptui"
 )
 
-type PatternMetadata struct {
-	DirName      string   `json:"dir_name"`
-	FriendlyName string   `json:"friendly_name"`
-	Description  string   `json:"short_description"`
-	Category     string   `json:"category"`
-	Tags         []string `json:"tags"`
+type Pattern struct {
+	DirName          string   `json:"dir_name"`
+	FriendlyName     string   `json:"friendly_name"`
+	ShortDescription string   `json:"short_description"`
+	Categories       []string `json:"categories"`
+	Tags             []string `json:"tags"`
 }
 
-type PatternsMetadata struct {
-	Patterns []PatternMetadata `json:"patterns"`
+type PatternList struct {
+	Patterns []Pattern `json:"patterns"`
 }
 
-func main() {
-	err := godotenv.Load()
-	if err != nil {
-		fmt.Println("Error loading .env file")
-		return
-	}
-
-	patternsDir := os.Getenv("FABRIC_PATTERNS_DIRECTORY_PATH")
-	if patternsDir == "" {
-		fmt.Println("FABRIC_PATTERNS_DIRECTORY_PATH not set in .env file")
-		return
-	}
-
-	outputDir := os.Getenv("OUTPUT_DIR")
-	if outputDir == "" {
-		fmt.Println("OUTPUT_DIR not set in .env file")
-		return
-	}
-
-	metadataPath := os.Getenv("MERGED_PATTERNS_METADATA_PATH")
-	if metadataPath == "" {
-		fmt.Println("MERGED_PATTERNS_METADATA_PATH not set in .env file")
-		return
-	}
-
-	patterns, err := loadPatternMetadata(metadataPath)
-	if err != nil {
-		fmt.Printf("Error loading pattern metadata: %v\n", err)
-		return
-	}
-
-	for {
-		pattern, err := selectPattern(patterns)
-		if err != nil {
-			fmt.Printf("Pattern selection failed: %v\n", err)
-			return
-		}
-
-		inputSource, err := selectInputSource()
-		if err != nil {
-			fmt.Printf("Input source selection failed: %v\n", err)
-			return
-		}
-
-		command, err := buildFabricCommand(pattern.DirName, inputSource, outputDir)
-		if err != nil {
-			fmt.Printf("Command building failed: %v\n", err)
-			return
-		}
-
-		fmt.Printf("\nCommand to be executed:\n%s\n\n", command)
-
-		if !confirmExecution() {
-			fmt.Println("Execution cancelled.")
-			if !promptContinue() {
-				break
-			}
-			continue
-		}
-
-		err = executeFabricCommand(command)
-		if err != nil {
-			fmt.Printf("Execution failed: %v\n", err)
-			return
-		}
-
-		if !promptContinue() {
-			break
-		}
-	}
+type model struct {
+	list list.Model
 }
 
-func loadPatternMetadata(path string) ([]PatternMetadata, error) {
-	data, err := ioutil.ReadFile(path)
-	if err != nil {
-		return nil, err
-	}
-
-	var metadata PatternsMetadata
-	err = json.Unmarshal(data, &metadata)
-	if err != nil {
-		return nil, err
-	}
-
-	sort.Slice(metadata.Patterns, func(i, j int) bool {
-		return metadata.Patterns[i].Category < metadata.Patterns[j].Category
-	})
-
-	return metadata.Patterns, nil
-}
-
-func selectPattern(patterns []PatternMetadata) (PatternMetadata, error) {
-	funcMap := template.FuncMap{
-		"join":  strings.Join,
-		"cyan":  color.CyanString,
-		"green": color.GreenString,
-		"red":   color.RedString,
-		"faint": color.New(color.Faint).SprintFunc(),
-	}
-
-	templates := &promptui.SelectTemplates{
-		Label:    "{{ .Category | cyan }}",
-		Active:   "\U0001F4C1 {{ .FriendlyName | cyan }} ({{ .Description | green }})",
-		Inactive: "  {{ .FriendlyName | cyan }} ({{ .Description | green }})",
-		Selected: "\U0001F4C1 {{ .FriendlyName | red | cyan }}",
-		FuncMap: funcMap,
-	}
-
-	prompt := promptui.Select{
-		Label:     "Select Pattern",
-		Items:     patterns,
-		Templates: templates,
-		Size:      10,
-	}
-
-	i, _, err := prompt.Run()
-
-	if err != nil {
-		return PatternMetadata{}, err
-	}
-
-	return patterns[i], nil
-}
-
-func selectInputSource() (string, error) {
-	prompt := promptui.Select{
-		Label: "Select input source",
-		Items: []string{"Clipboard", "Manual Input"},
-	}
-
-	_, result, err := prompt.Run()
-	if err != nil {
-		return "", err
-	}
-
-	return result, nil
-}
-
-func buildFabricCommand(pattern, inputSource, outputDir string) (string, error) {
-	streamResults := os.Getenv("STREAM_RESULTS") == "true"
-	streamFlag := ""
-	if streamResults {
-		streamFlag = "--stream"
-	}
-
-	timestamp := time.Now().Format(time.RFC3339)
-	outputFile := filepath.Join(outputDir, fmt.Sprintf("%s_%s.md", pattern, timestamp))
-
-	var command string
-	if inputSource == "Clipboard" {
-		command = fmt.Sprintf("pbpaste | fabric %s --pattern %s > %s", streamFlag, pattern, outputFile)
-	} else {
-		prompt := promptui.Prompt{
-			Label: "Enter your text",
-		}
-		input, err := prompt.Run()
-		if err != nil {
-			return "", err
-		}
-		command = fmt.Sprintf("echo '%s' | fabric %s --pattern %s > %s", input, streamFlag, pattern, outputFile)
-	}
-
-	return command, nil
-}
-
-func confirmExecution() bool {
-	prompt := promptui.Select{
-		Label: "Do you want to execute this command?",
-		Items: []string{"Yes", "No"},
-	}
-
-	_, result, err := prompt.Run()
-	if err != nil {
-		fmt.Printf("Prompt failed %v\n", err)
-		return false
-	}
-
-	return result == "Yes"
-}
-
-func executeFabricCommand(command string) error {
-	cmd := exec.Command("bash", "-c", command)
-
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-
-	err := cmd.Run()
-	if err != nil {
-		return err
-	}
-
-	fmt.Printf("Command executed successfully.\n")
+func (m model) Init() tea.Cmd {
 	return nil
 }
 
-func promptContinue() bool {
-	prompt := promptui.Select{
-		Label: "Do you want to execute another pattern?",
-		Items: []string{"Yes", "No"},
+func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+	switch msg := msg.(type) {
+	case tea.KeyMsg:
+		if msg.String() == "q" || msg.String() == "ctrl+c" {
+			return m, tea.Quit
+		}
+	case tea.WindowSizeMsg:
+		h, v := lipgloss.NewStyle().Margin(1, 2).GetFrameSize()
+		m.list.SetSize(msg.Width-h, msg.Height-v)
 	}
 
-	_, result, err := prompt.Run()
+	var cmd tea.Cmd
+	m.list, cmd = m.list.Update(msg)
+	return m, cmd
+}
+
+func (m model) View() string {
+	return m.list.View()
+}
+
+func (i Pattern) Title() string       { return i.FriendlyName }
+func (i Pattern) Description() string { return i.ShortDescription }
+func (i Pattern) FilterValue() string { return i.FriendlyName }
+
+func main() {
+	// Load .env file
+	err := godotenv.Load()
 	if err != nil {
-		fmt.Printf("Prompt failed %v\n", err)
-		return false
+		fmt.Println("Error loading .env file")
+		os.Exit(1)
 	}
 
-	return result == "Yes"
+	// Get metadata path from environment variable
+	metadataPath := os.Getenv("MERGED_PATTERNS_METADATA_PATH")
+	if metadataPath == "" {
+		fmt.Println("MERGED_PATTERNS_METADATA_PATH not set in .env file")
+		os.Exit(1)
+	}
+
+	// Load patterns from JSON file
+	file, err := ioutil.ReadFile(metadataPath)
+	if err != nil {
+		fmt.Printf("Error reading file: %v\n", err)
+		os.Exit(1)
+	}
+
+	var patternList PatternList
+	err = json.Unmarshal(file, &patternList)
+	if err != nil {
+		fmt.Printf("Error unmarshaling JSON: %v\n", err)
+		os.Exit(1)
+	}
+
+	// Convert patterns to list items
+	items := make([]list.Item, len(patternList.Patterns))
+	for i, pattern := range patternList.Patterns {
+		items[i] = pattern
+	}
+
+	// Create the list
+	l := list.New(items, list.NewDefaultDelegate(), 0, 0)
+	l.Title = "Fabric Patterns"
+
+	// Create the model
+	m := model{list: l}
+
+	// Run the program
+	p := tea.NewProgram(m, tea.WithAltScreen())
+	if err := p.Start(); err != nil {
+		fmt.Printf("Error running program: %v", err)
+		os.Exit(1)
+	}
 }

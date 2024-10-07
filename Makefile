@@ -1,5 +1,5 @@
 # Binary name
-BINARY_NAME=fabric-promptui
+BINARY_NAME=fabric-cli
 
 # Go parameters
 GOCMD=go
