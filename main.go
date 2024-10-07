@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"sort"
+	"strconv"
 	"strings"
 
 	"github.com/charmbracelet/bubbles/list"
@@ -27,9 +29,11 @@ type PatternList struct {
 }
 
 type model struct {
-	list        list.Model
-	textInput   textinput.Model
-	allPatterns []list.Item
+	list          list.Model
+	textInput     textinput.Model
+	allPatterns   []list.Item
+	alphaSort     bool
+	sortByDirName bool
 }
 
 func (m model) Init() tea.Cmd {
@@ -45,7 +49,9 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "ctrl+c", "q":
 			return m, tea.Quit
 		case "enter":
-			m.list.SetItems(filterPatterns(m.allPatterns, m.textInput.Value()))
+			filtered := filterPatterns(m.allPatterns, m.textInput.Value())
+			sortPatterns(filtered, m.alphaSort, m.sortByDirName)
+			m.list.SetItems(filtered)
 		}
 
 	case tea.WindowSizeMsg:
@@ -98,6 +104,19 @@ func containsInSlice(slice []string, search string) bool {
 	return false
 }
 
+func sortPatterns(patterns []list.Item, alphaSort, sortByDirName bool) {
+	sort.Slice(patterns, func(i, j int) bool {
+		pi, pj := patterns[i].(Pattern), patterns[j].(Pattern)
+		if sortByDirName {
+			return pi.DirName < pj.DirName
+		}
+		if alphaSort {
+			return pi.FriendlyName < pj.FriendlyName
+		}
+		return false // No sorting
+	})
+}
+
 func main() {
 	err := godotenv.Load()
 	if err != nil {
@@ -109,6 +128,20 @@ func main() {
 	if metadataPath == "" {
 		fmt.Println("MERGED_PATTERNS_METADATA_PATH not set in .env file")
 		os.Exit(1)
+	}
+
+	alphaSortStr := os.Getenv("ALPHA_SORT")
+	alphaSort, err := strconv.ParseBool(alphaSortStr)
+	if err != nil {
+		fmt.Println("Error parsing ALPHA_SORT value, defaulting to false")
+		alphaSort = false
+	}
+
+	sortByDirNameStr := os.Getenv("SORT_BY_DIR_NAME")
+	sortByDirName, err := strconv.ParseBool(sortByDirNameStr)
+	if err != nil {
+		fmt.Println("Error parsing SORT_BY_DIR_NAME value, defaulting to false")
+		sortByDirName = false
 	}
 
 	file, err := ioutil.ReadFile(metadataPath)
@@ -129,6 +162,8 @@ func main() {
 		items[i] = pattern
 	}
 
+	sortPatterns(items, alphaSort, sortByDirName)
+
 	ti := textinput.New()
 	ti.Placeholder = "Type to filter patterns"
 	ti.Focus()
@@ -137,9 +172,11 @@ func main() {
 	l.Title = "Fabric Patterns"
 
 	m := model{
-		list:        l,
-		textInput:   ti,
-		allPatterns: items,
+		list:          l,
+		textInput:     ti,
+		allPatterns:   items,
+		alphaSort:     alphaSort,
+		sortByDirName: sortByDirName,
 	}
 
 	p := tea.NewProgram(m, tea.WithAltScreen())
