@@ -28,12 +28,20 @@ type PatternList struct {
 	Patterns []Pattern `json:"patterns"`
 }
 
+type config struct {
+	width       int
+	height      int
+	title       string
+	placeholder string
+}
+
 type model struct {
 	list          list.Model
 	textInput     textinput.Model
 	allPatterns   []list.Item
 	alphaSort     bool
 	sortByDirName bool
+	config        config
 }
 
 func (m model) Init() tea.Cmd {
@@ -121,6 +129,17 @@ func sortPatterns(patterns []list.Item, alphaSort, sortByDirName bool) {
 	})
 }
 
+func loadConfig() config {
+	width, _ := strconv.Atoi(os.Getenv("CLI_WIDTH"))
+	height, _ := strconv.Atoi(os.Getenv("CLI_HEIGHT"))
+	return config{
+		width:       width,
+		height:      height,
+		title:       os.Getenv("CLI_TITLE"),
+		placeholder: os.Getenv("CLI_PLACEHOLDER"),
+	}
+}
+
 func main() {
 	err := godotenv.Load()
 	if err != nil {
@@ -168,12 +187,14 @@ func main() {
 
 	sortPatterns(items, alphaSort, sortByDirName)
 
+	config := loadConfig()
+
 	ti := textinput.New()
-	ti.Placeholder = "Type to filter patterns"
+	ti.Placeholder = config.placeholder
 	ti.Focus()
 
-	l := list.New(items, list.NewDefaultDelegate(), 0, 0)
-	l.Title = "Fabric Patterns"
+	l := list.New(items, list.NewDefaultDelegate(), config.width, config.height)
+	l.Title = config.title
 
 	m := model{
 		list:          l,
@@ -181,6 +202,7 @@ func main() {
 		allPatterns:   items,
 		alphaSort:     alphaSort,
 		sortByDirName: sortByDirName,
+		config:        config,
 	}
 
 	p := tea.NewProgram(m, tea.WithAltScreen())
