@@ -73,7 +73,10 @@ func (m model) View() string {
 	)
 }
 
-func (i Pattern) Title() string       { return i.FriendlyName }
+func (i Pattern) Title() string {
+	return fmt.Sprintf("%s (📂: \"%s\")", i.FriendlyName, i.DirName)
+}
+
 func (i Pattern) Description() string { return i.ShortDescription }
 func (i Pattern) FilterValue() string { return i.FriendlyName }
 
@@ -86,6 +89,7 @@ func filterPatterns(patterns []list.Item, filter string) []list.Item {
 	for _, item := range patterns {
 		pattern := item.(Pattern)
 		if strings.Contains(strings.ToLower(pattern.FriendlyName), strings.ToLower(filter)) ||
+			strings.Contains(strings.ToLower(pattern.DirName), strings.ToLower(filter)) ||
 			strings.Contains(strings.ToLower(pattern.ShortDescription), strings.ToLower(filter)) ||
 			containsInSlice(pattern.Categories, filter) ||
 			containsInSlice(pattern.Tags, filter) {
