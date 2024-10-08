@@ -54,7 +54,6 @@ func initialModel(patterns []list.Item, config Config) model {
 	ti.Focus()
 
 	l := list.New(patterns, list.NewDefaultDelegate(), config.Width, config.Height)
-	l.Title = config.Title
 
 	confirmItems := []list.Item{
 		confirmItem{title: "Yes", desc: "Execute the command"},

@@ -12,10 +12,10 @@ var (
 	titleStyle = lipgloss.NewStyle().
 			Foreground(lipgloss.Color("#FAFAFA")).
 			Background(lipgloss.Color("#7D56F4")).
-			Padding(0, 1)
+			Padding(0, 0)
 
 	appStyle = lipgloss.NewStyle().
-			Padding(1, 2, 1, 2)
+			Padding(0, 0, 0, 0)
 )
 
 func (m model) Init() tea.Cmd {
@@ -82,7 +82,6 @@ func (m model) View() string {
 	}
 
 	return appStyle.Render(lipgloss.JoinVertical(lipgloss.Left,
-		titleStyle.Render(m.config.Title),
 		"\n",
 		content,
 	))
