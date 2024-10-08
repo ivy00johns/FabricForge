@@ -1,15 +1,24 @@
 {
 	"dir_name": "create_cyber_summary",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
+	"friendly_name": "Cybersecurity News Summarizer",
+	"short_description": "Generates concise summaries of cybersecurity news, categorizing threats, vulnerabilities, incidents, and malware.",
+	"description": "This pattern analyzes cybersecurity news and creates comprehensive summaries for technical professionals. It categorizes information into advisories, incidents, malware, and vulnerabilities, providing a quick overview of current cybersecurity landscape. The output is tailored for busy professionals who need to stay informed about the latest threats and developments.",
 	"categories": [
 		"Security and Threat Analysis",
-		"Text Processing and Summarization"
+		"Text Processing and Summarization",
+		"Communication and Presentation"
 	],
-	"tags": [],
-	"related_patterns": null,
-	"character_count": 0,
-	"estimated_token_count": 0,
-	"usage_example": ""
+	"tags": [
+		"cybersecurity",
+		"threat intelligence",
+		"vulnerability analysis",
+		"incident reporting",
+		"malware tracking",
+		"news summarization",
+		"security briefing"
+	],
+	"related_patterns": [],
+	"character_count": 1384,
+	"estimated_token_count": 346,
+	"usage_example": "cat cybersecurity_news.txt | fabric -p create_cyber_summary"
 }

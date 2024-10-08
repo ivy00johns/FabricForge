@@ -1,14 +1,24 @@
 {
 	"dir_name": "create_art_prompt",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
+	"friendly_name": "AI Art Prompt Generator",
+	"short_description": "Generates detailed prompts for AI art creation based on conceptual inputs.",
+	"description": "This pattern transforms conceptual ideas into vivid, detailed prompts for AI art generation. It analyzes the input concept, visualizes it creatively, and produces a comprehensive description along with specific instructions for AI art creation, including style references and emotional impact.",
 	"categories": [
-		"Creative and Storytelling"
+		"Content Creation and Writing",
+		"Creative and Storytelling",
+		"AI and Machine Learning"
 	],
-	"tags": [],
-	"related_patterns": null,
-	"character_count": 0,
-	"estimated_token_count": 0,
-	"usage_example": ""
+	"tags": [
+		"art generation",
+		"prompt engineering",
+		"visual conceptualization",
+		"creative writing",
+		"AI collaboration",
+		"style guidance",
+		"concept interpretation"
+	],
+	"related_patterns": [],
+	"character_count": 639,
+	"estimated_token_count": 160,
+	"usage_example": "echo 'The future of sustainable urban living' | fabric -p create_art_prompt"
 }

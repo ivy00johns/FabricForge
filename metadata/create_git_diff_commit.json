@@ -1,14 +1,24 @@
 {
 	"dir_name": "create_git_diff_commit",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
+	"friendly_name": "Git Diff Commit Generator",
+	"short_description": "Analyzes Git diffs and generates appropriate commit commands with conventional commit messages.",
+	"description": "This pattern examines Git diff output, identifies significant changes, and creates Git commands for staging and committing these changes. It uses conventional commit prefixes to categorize the nature of the changes, providing a clean and standardized approach to version control updates.",
 	"categories": [
-		"Code and Development"
+		"Code and Development",
+		"Documentation and Explanation",
+		"Version Control"
 	],
-	"tags": [],
-	"related_patterns": null,
-	"character_count": 0,
-	"estimated_token_count": 0,
-	"usage_example": ""
+	"tags": [
+		"git",
+		"version control",
+		"commit messages",
+		"code changes",
+		"conventional commits",
+		"development workflow",
+		"change management"
+	],
+	"related_patterns": [],
+	"character_count": 1057,
+	"estimated_token_count": 264,
+	"usage_example": "git diff | fabric -p create_git_diff_commit"
 }

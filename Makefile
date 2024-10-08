@@ -11,7 +11,7 @@ GOCLEAN=$(GOCMD) clean
 MAIN_PACKAGE=.
 
 # Prettier command
-PRETTIER=npx prettier --write .
+PRETTIER=npx prettier . --write --cache --log-level warn
 
 .PHONY: all build run clean format merge
 
@@ -20,7 +20,7 @@ all: build
 build: format
 	$(GOBUILD) -o $(BINARY_NAME) $(MAIN_PACKAGE)
 
-run:
+run: build
 	./$(BINARY_NAME)
 
 dev:

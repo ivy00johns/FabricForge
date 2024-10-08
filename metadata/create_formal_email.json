@@ -1,15 +1,24 @@
 {
 	"dir_name": "create_formal_email",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
+	"friendly_name": "Formal Email Composer",
+	"short_description": "Crafts professional and polished formal emails tailored to specific contexts and requirements.",
+	"description": "This pattern assists in composing formal emails by understanding the context, purpose, and required tone. It generates well-structured, professional emails with appropriate greetings, clear introductions, detailed body content, and courteous closings. The pattern ensures adherence to business etiquette and professional writing standards.",
 	"categories": [
-		"Content Creation and Writing",
-		"Business and Professional Development"
+		"Communication and Presentation",
+		"Business and Professional Development",
+		"Content Creation and Writing"
 	],
-	"tags": [],
-	"related_patterns": null,
-	"character_count": 0,
-	"estimated_token_count": 0,
-	"usage_example": ""
+	"tags": [
+		"email composition",
+		"business communication",
+		"professional writing",
+		"formal correspondence",
+		"email etiquette",
+		"business etiquette",
+		"corporate communication"
+	],
+	"related_patterns": [],
+	"character_count": 2157,
+	"estimated_token_count": 539,
+	"usage_example": "echo 'Write a formal email to schedule a meeting with a potential client' | fabric -p create_formal_email"
 }

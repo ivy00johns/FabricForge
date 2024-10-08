@@ -1,14 +1,24 @@
 {
 	"dir_name": "create_command",
-	"friendly_name": "",
-	"short_description": "",
-	"description": "",
+	"friendly_name": "Command Line Generator",
+	"short_description": "Generates CLI commands for various tools based on user requirements and tool documentation.",
+	"description": "This pattern takes a user's intent for a specific tool and its help documentation as input. It then constructs a precise command line instruction, incorporating the appropriate switches and parameters. The pattern is particularly useful for penetration testers and security professionals who need to quickly generate accurate tool commands.",
 	"categories": [
-		"Code and Development"
+		"Security and Threat Analysis",
+		"Code and Development",
+		"Problem Solving and Decision Making"
 	],
-	"tags": [],
-	"related_patterns": null,
-	"character_count": 0,
-	"estimated_token_count": 0,
-	"usage_example": ""
+	"tags": [
+		"command line interface",
+		"penetration testing",
+		"security tools",
+		"automation",
+		"tool usage",
+		"CLI optimization",
+		"documentation parsing"
+	],
+	"related_patterns": [],
+	"character_count": 1540,
+	"estimated_token_count": 385,
+	"usage_example": "echo -e 'use nmap to scan 192.168.1.0/24 for open ports 80 and 443\n\nnmap -h' | fabric -p create_command"
 }
