@@ -44,6 +44,16 @@ type model struct {
 	config        config
 }
 
+var (
+	titleStyle = lipgloss.NewStyle().
+			Foreground(lipgloss.Color("#FAFAFA")).
+			Background(lipgloss.Color("#7D56F4")).
+			Padding(0, 1)
+
+	appStyle = lipgloss.NewStyle().
+			Padding(1, 2, 1, 2)
+)
+
 func (m model) Init() tea.Cmd {
 	return textinput.Blink
 }
@@ -63,9 +73,9 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 
 	case tea.WindowSizeMsg:
-		h, v := lipgloss.NewStyle().Margin(1, 2).GetFrameSize()
-		m.list.SetSize(msg.Width-h, msg.Height-v-3)
-		m.textInput.Width = msg.Width - h
+		h, v := appStyle.GetFrameSize()
+		m.list.SetSize(msg.Width-h, msg.Height-v-6) // Adjusted to leave space for title and input
+		m.textInput.Width = msg.Width - h - 4       // Subtract 4 for some padding
 	}
 
 	m.textInput, cmd = m.textInput.Update(msg)
@@ -75,10 +85,13 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m model) View() string {
-	return lipgloss.JoinVertical(lipgloss.Left,
-		m.textInput.View(),
+	return appStyle.Render(lipgloss.JoinVertical(lipgloss.Left,
+		titleStyle.Render(m.config.title),
+		"\n", // Add an empty line for spacing
+		"Search: "+m.textInput.View(),
+		"\n", // Add another empty line for spacing
 		m.list.View(),
-	)
+	))
 }
 
 func (i Pattern) Title() string {
@@ -194,7 +207,6 @@ func main() {
 	ti.Focus()
 
 	l := list.New(items, list.NewDefaultDelegate(), config.width, config.height)
-	l.Title = config.title
 
 	m := model{
 		list:          l,
