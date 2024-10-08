@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"os/exec"
 
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/joho/godotenv"
@@ -25,8 +26,23 @@ func main() {
 	m := initialModel(patterns, config)
 
 	p := tea.NewProgram(m, tea.WithAltScreen())
-	if err := p.Start(); err != nil {
+	finalModel, err := p.Run()
+	if err != nil {
 		fmt.Printf("Error running program: %v", err)
 		os.Exit(1)
+	}
+
+	// Execute the selected command only if confirmed
+	finalM, ok := finalModel.(model)
+	if ok && finalM.selectedCmd != "" && finalM.state == "executing" {
+		fmt.Printf("Executing command: %s\n", finalM.selectedCmd)
+		cmd := exec.Command("sh", "-c", finalM.selectedCmd)
+		cmd.Stdout = os.Stdout
+		cmd.Stderr = os.Stderr
+		err := cmd.Run()
+		if err != nil {
+			fmt.Printf("Error executing command: %v\n", err)
+			os.Exit(1)
+		}
 	}
 }
