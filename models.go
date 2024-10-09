@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 	"time"
 
 	"github.com/charmbracelet/bubbles/list"
@@ -9,34 +10,49 @@ import (
 )
 
 type Pattern struct {
-	DirName          string   `json:"dir_name"`
-	FriendlyName     string   `json:"friendly_name"`
-	ShortDescription string   `json:"short_description"`
-	Categories       []string `json:"categories"`
-	Tags             []string `json:"tags"`
+	DirName      string   `json:"dir_name"`
+	FriendlyName string   `json:"friendly_name"`
+	ShortDesc    string   `json:"short_description"`
+	Categories   []string `json:"categories"`
+	Tags         []string `json:"tags"`
 }
 
 type PatternList struct {
 	Patterns []Pattern `json:"patterns"`
 }
 
+type FilterOption struct {
+	Name string
+	Desc string
+}
+
+func (f FilterOption) Title() string       { return f.Name }
+func (f FilterOption) Description() string { return f.Desc }
+func (f FilterOption) FilterValue() string { return f.Name }
+
 type model struct {
-	list          list.Model
-	textInput     textinput.Model
-	allPatterns   []list.Item
-	alphaSort     bool
-	sortByDirName bool
-	config        Config
-	state         string
-	selectedCmd   string
-	confirmItems  []list.Item
+	list           list.Model
+	textInput      textinput.Model
+	allPatterns    []list.Item
+	filteredItems  []list.Item
+	alphaSort      bool
+	sortByDirName  bool
+	config         Config
+	state          string
+	selectedCmd    string
+	confirmItems   []list.Item
+	filterOptions  []list.Item
+	currentFilter  string
+	allTags        []string
+	allCategories  []string
+	allDirectories []string
 }
 
 func (i Pattern) Title() string {
 	return fmt.Sprintf("%s (📂: \"%s\")", i.FriendlyName, i.DirName)
 }
 
-func (i Pattern) Description() string { return i.ShortDescription }
+func (i Pattern) Description() string { return i.ShortDesc }
 func (i Pattern) FilterValue() string { return i.FriendlyName }
 
 type confirmItem struct {
@@ -54,21 +70,37 @@ func initialModel(patterns []list.Item, config Config) model {
 	ti.Focus()
 
 	l := list.New(patterns, list.NewDefaultDelegate(), config.Width, config.Height)
+	l.Title = config.Title
 
 	confirmItems := []list.Item{
 		confirmItem{title: "Yes", desc: "Execute the command"},
 		confirmItem{title: "No", desc: "Cancel and return to pattern selection"},
 	}
 
+	filterOptions := []list.Item{
+		FilterOption{Name: "Global Search", Desc: "Search across all fields"},
+		FilterOption{Name: "Tags", Desc: "Filter by tags"},
+		FilterOption{Name: "Categories", Desc: "Filter by categories"},
+		FilterOption{Name: "Directories", Desc: "Filter by directory names"},
+	}
+
+	allTags, allCategories, allDirectories := extractMetadata(patterns)
+
 	return model{
-		list:          l,
-		textInput:     ti,
-		allPatterns:   patterns,
-		alphaSort:     config.AlphaSort,
-		sortByDirName: config.SortByDirName,
-		config:        config,
-		state:         "selecting",
-		confirmItems:  confirmItems,
+		list:           l,
+		textInput:      ti,
+		allPatterns:    patterns,
+		filteredItems:  patterns,
+		alphaSort:      config.AlphaSort,
+		sortByDirName:  config.SortByDirName,
+		config:         config,
+		state:          "selecting",
+		confirmItems:   confirmItems,
+		filterOptions:  filterOptions,
+		currentFilter:  "Global Search",
+		allTags:        allTags,
+		allCategories:  allCategories,
+		allDirectories: allDirectories,
 	}
 }
 
@@ -86,4 +118,32 @@ func (m *model) buildFabricCommand(pattern Pattern) string {
 	}
 
 	return command
+}
+
+func extractMetadata(patterns []list.Item) ([]string, []string, []string) {
+	tagMap := make(map[string]bool)
+	categoryMap := make(map[string]bool)
+	directoryMap := make(map[string]bool)
+
+	for _, item := range patterns {
+		pattern := item.(Pattern)
+		for _, tag := range pattern.Tags {
+			tagMap[tag] = true
+		}
+		for _, category := range pattern.Categories {
+			categoryMap[category] = true
+		}
+		directoryMap[pattern.DirName] = true
+	}
+
+	return mapToSortedSlice(tagMap), mapToSortedSlice(categoryMap), mapToSortedSlice(directoryMap)
+}
+
+func mapToSortedSlice(m map[string]bool) []string {
+	slice := make([]string, 0, len(m))
+	for k := range m {
+		slice = append(slice, k)
+	}
+	sort.Strings(slice)
+	return slice
 }
