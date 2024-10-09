@@ -36,9 +36,18 @@ This CLI tool provides a user-friendly interface to browse, filter, and execute 
     ```
 
 3. Build the project:
+
     ```
     make build
     ```
+
+4. Merge pattern metadata:
+
+    ```
+    make merge
+    ```
+
+    This command combines individual pattern metadata files into a single JSON file that Fabric Forge uses. Run this command whenever you add or update patterns in the Fabric project.
 
 ## Configuration
 
@@ -97,7 +106,7 @@ This project uses a Makefile to streamline development tasks. Here are some usef
 -   `make dev`: Run the application without building a binary
 -   `make clean`: Remove built binary
 -   `make rebuild`: Clean, build, and run
--   `make merge`: Run the JSON merge script
+-   `make merge`: Run the JSON merge script to update pattern metadata
 -   `make update_json`: Update metadata JSON
 -   `make test`: Run tests
 -   `make fmt`: Format Go code
