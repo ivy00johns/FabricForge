@@ -1,6 +1,6 @@
 # Fabric Forge
 
-Fabric CLI is an interactive command-line interface for the Fabric AI project, designed to streamline the process of selecting and executing AI patterns.
+Fabric Forge is an interactive command-line interface for the Fabric AI project, designed to streamline the process of selecting and executing AI patterns.
 
 ## Overview
 
@@ -19,6 +19,25 @@ This CLI tool provides a user-friendly interface to browse, filter, and execute 
 -   Go 1.16 or later
 -   Fabric AI project installed and configured
 -   Node.js and npm (for Prettier)
+
+## Project Structure
+
+```
+FabricForge/
+├── custom_patterns/
+├── metadata/
+├── output/
+├── patterns/
+├── samples/
+├── src/
+├── utils/
+├── .env
+├── .env.example
+├── go.mod
+├── go.sum
+├── Makefile
+└── README.md
+```
 
 ## Installation
 

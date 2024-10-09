@@ -10,7 +10,7 @@ GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 
 # Main Go package
-MAIN_PACKAGE=.
+MAIN_PACKAGE=./src
 
 # Prettier command
 PRETTIER=npx prettier . --write --cache --log-level warn
