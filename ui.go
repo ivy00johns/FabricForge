@@ -18,6 +18,15 @@ var (
 
 	appStyle = lipgloss.NewStyle().
 			Padding(0, 0, 0, 0)
+
+	// New style for the command text
+	commandStyle = lipgloss.NewStyle().
+			Foreground(lipgloss.Color("#00FF00")).  // Bright green color
+			Background(lipgloss.Color("#333333")).  // Dark gray background
+			Padding(0, 1).                          // Add some padding
+			BorderStyle(lipgloss.NormalBorder()).   // Add a border
+			BorderForeground(lipgloss.Color("#FFFFFF")).  // White border color
+			Margin(1, 0)  // Add some vertical margin
 )
 
 func (m model) Init() tea.Cmd {
@@ -123,7 +132,8 @@ func (m model) View() string {
 		)
 	case "confirming":
 		content = lipgloss.JoinVertical(lipgloss.Left,
-			fmt.Sprintf("Command to execute: %s\n", m.selectedCmd),
+			"Command to execute:",
+			commandStyle.Render(m.selectedCmd),  // Apply the new style to the command
 			"Do you want to execute this command?",
 			m.list.View(),
 		)
