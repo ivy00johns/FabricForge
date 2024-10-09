@@ -49,7 +49,9 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "esc":
 			if m.state == "filtering" || m.state == "filter_menu" {
 				m.state = "selecting"
+				m.filteredItems = m.allPatterns
 				m.list.SetItems(m.filteredItems)
+				m.textInput.SetValue("")
 			}
 		case "enter":
 			switch m.state {
@@ -78,7 +80,10 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					m.state = "filtering"
 					m.textInput.SetValue("")
 					m.textInput.Focus()
-					if m.currentFilter != "Global Search" {
+					if m.currentFilter == "Global Search" {
+						m.filteredItems = m.allPatterns
+						m.list.SetItems(m.filteredItems)
+					} else {
 						var filterItems []list.Item
 						switch m.currentFilter {
 						case "Tags":
@@ -92,13 +97,20 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 					}
 				}
 			case "filtering":
-				if m.currentFilter != "Global Search" && m.list.SelectedItem() != nil {
+				if m.currentFilter == "Global Search" {
+					if m.list.SelectedItem() != nil {
+						selectedPattern := m.list.SelectedItem().(Pattern)
+						m.selectedCmd = m.buildFabricCommand(selectedPattern)
+						m.state = "confirming"
+						m.list.SetItems(m.confirmItems)
+					} else {
+						m.filteredItems = filterPatterns(m.allPatterns, m.textInput.Value())
+						m.state = "selecting"
+						m.list.SetItems(m.filteredItems)
+					}
+				} else if m.list.SelectedItem() != nil {
 					selectedFilter := m.list.SelectedItem().(FilterOption).Name
 					m.filteredItems = filterPatternsByMetadata(m.allPatterns, m.currentFilter, selectedFilter)
-					m.state = "selecting"
-					m.list.SetItems(m.filteredItems)
-				} else {
-					m.filteredItems = filterPatterns(m.allPatterns, m.textInput.Value())
 					m.state = "selecting"
 					m.list.SetItems(m.filteredItems)
 				}
@@ -133,7 +145,7 @@ func (m model) View() string {
 	case "confirming":
 		content = lipgloss.JoinVertical(lipgloss.Left,
 			"Command to execute:",
-			commandStyle.Render(m.selectedCmd),  // Apply the new style to the command
+			commandStyle.Render(m.selectedCmd),
 			"Do you want to execute this command?",
 			m.list.View(),
 		)
@@ -145,7 +157,7 @@ func (m model) View() string {
 	case "filtering":
 		if m.currentFilter == "Global Search" {
 			content = lipgloss.JoinVertical(lipgloss.Left,
-				fmt.Sprintf("Filter %s (type to filter, esc to cancel):", m.currentFilter),
+				fmt.Sprintf("Filter %s (type to filter, ↑/↓ to select, enter to confirm):", m.currentFilter),
 				m.textInput.View(),
 				m.list.View(),
 			)

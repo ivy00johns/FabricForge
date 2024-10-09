@@ -37,8 +37,6 @@ func sortPatterns(patterns []list.Item, alphaSort, sortByDirName bool) {
 		if alphaSort {
 			return pi.FriendlyName < pj.FriendlyName
 		}
-		return false // No sorting
+		return false
 	})
 }
-
-// Removed extractMetadata and mapToSortedSlice functions from here

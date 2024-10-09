@@ -34,8 +34,8 @@ metadata/customer.json
 output/*
 
 # Builds
-fabric-promptui
-fabric-cli
+FabricForge
 
+# Misc
 .DS_Store
 utils/update_json/json_updates.json

@@ -1,11 +1,13 @@
 # Binary name
-BINARY_NAME=fabric-cli
+BINARY_NAME=FabricForge
 
 # Go parameters
 GOCMD=go
 GOBUILD=$(GOCMD) build
 GORUN=$(GOCMD) run
 GOCLEAN=$(GOCMD) clean
+GOTEST=$(GOCMD) test
+GOGET=$(GOCMD) get
 
 # Main Go package
 MAIN_PACKAGE=.
@@ -13,7 +15,7 @@ MAIN_PACKAGE=.
 # Prettier command
 PRETTIER=npx prettier . --write --cache --log-level warn
 
-.PHONY: all build run clean format merge
+.PHONY: all build run dev clean rebuild merge update_json test fmt format deps build-all help
 
 all: build
 
@@ -43,7 +45,7 @@ update_json:
 
 # Run tests
 test:
-	$(GOCMD) test ./...
+	$(GOTEST) -v ./...
 
 # Format code (Go)
 fmt:
@@ -76,10 +78,10 @@ help:
 	@echo "  make dev         - Run the application without building a binary"
 	@echo "  make clean       - Remove built binary"
 	@echo "  make rebuild     - Clean, build, and run"
+	@echo "  make merge       - Run the JSON merge script"
+	@echo "  make update_json - Update metadata JSON"
 	@echo "  make test        - Run tests"
 	@echo "  make fmt         - Format Go code"
 	@echo "  make format      - Format code using Prettier"
-	@echo "  make lint        - Run linter"
 	@echo "  make deps        - Ensure dependencies are up to date"
 	@echo "  make build-all   - Build for multiple platforms"
-	@echo "  make merge       - Run the JSON merge script in ./utils/merge_patterns.go"
