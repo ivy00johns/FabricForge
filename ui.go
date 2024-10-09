@@ -123,7 +123,7 @@ func (m model) View() string {
 		)
 	case "confirming":
 		content = lipgloss.JoinVertical(lipgloss.Left,
-			fmt.Sprintf("Command to execute: %s", m.selectedCmd),
+			fmt.Sprintf("Command to execute: %s\n", m.selectedCmd),
 			"Do you want to execute this command?",
 			m.list.View(),
 		)
